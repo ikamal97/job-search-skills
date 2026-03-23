@@ -1,5 +1,7 @@
 # Job Search Skills for Claude Code
 
+> The open-source, privacy-first job search system for Claude Code. Run `/ineedajob`, answer questions about your career, and get tailored resumes, cover letters, and LinkedIn content — all on your machine.
+
 Two Claude Code skills that automate the job search process end-to-end: from discovering roles and tailoring resumes to optimizing your LinkedIn profile.
 
 ## Quick Start
@@ -9,6 +11,23 @@ Two Claude Code skills that automate the job search process end-to-end: from dis
 ```
 
 That's it. The `/ineedajob` workflow interviews you about your career, skills, and goals, then generates all the context files that power every other workflow. No manual setup required.
+
+## See It In Action
+
+Browse a complete example to see what the skill pack produces — no setup required:
+
+**Meet Alex Chen** — 6 years experience, targeting remote Product Operations roles.
+
+| What | File | Description |
+|------|------|-------------|
+| **Career Context** | [`examples/alex-chen/`](examples/alex-chen/) | All 6 context files generated from the `/ineedajob` interview |
+| **Honest Gaps** | [`Honest Gaps.md`](examples/alex-chen/Honest%20Gaps.md) | The authenticity constraints that keep the system honest |
+| **Job Posting** | [`job-posting.md`](examples/alex-chen/job-posting.md) | A Product Operations Manager role at Acme Corp |
+| **Tailored Resume** | [`output/Alex_Chen_Resume_Acme_Corp.md`](examples/alex-chen/output/Alex_Chen_Resume_Acme_Corp.md) | ATS-optimized resume tailored to the Acme Corp JD |
+| **Cover Letter** | [`output/Alex_Chen_CoverLetter_Acme_Corp.md`](examples/alex-chen/output/Alex_Chen_CoverLetter_Acme_Corp.md) | Targeted cover letter with real achievements |
+| **LinkedIn Profile** | [`output/linkedin-profile.md`](examples/alex-chen/output/linkedin-profile.md) | Optimized headline, about section, and skills |
+
+Notice how the resume and cover letter reference real metrics from Alex's experience — but never overclaim. The Honest Gaps file ensures "Python scripting" doesn't become "Python developer" and "led 4-person ops team" doesn't become "senior engineering leader."
 
 ## Skills Included
 
@@ -138,6 +157,11 @@ Career Context Files (6 files generated from interview)
     │
     └─► LinkedInOptimizer ──► Optimized Profile Content
 ```
+
+## Roadmap
+
+- **Interview Simulator** — Practice interviews with AI playing the hiring manager, using your job description and context files. Get feedback on answers, test your STAR stories, and prep for the questions your Honest Gaps file says you're weakest on.
+- **Application Tracker** — Track which jobs you've applied to, interview stages, and follow-ups.
 
 ## Requirements
 
