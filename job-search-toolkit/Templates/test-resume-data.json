@@ -1,0 +1,51 @@
+{
+  "header": {
+    "name": "IDREES KAMAL",
+    "contact": {
+      "location": "Chicago, IL",
+      "phone": "(773) 789-0400",
+      "email": "ikamal97@gmail.com",
+      "linkedin": "linkedin.com/in/idreeskamal"
+    }
+  },
+  "professional_title": "BUSINESS SYSTEMS ANALYST",
+  "summary": "Business Systems Analyst with Deloitte and Oliver Wyman background. Expert in CRM implementation, data migration, and workflow automation. Built end-to-end client onboarding systems reducing effort by 60%.",
+  "skills": {
+    "Implementation & Delivery": ["Client Onboarding", "Data Migration", "Requirements Gathering", "UAT"],
+    "Technical Skills": ["SQL", "Python", "API Integrations", "Workflow Automation"],
+    "Tools & Platforms": ["Salesforce", "HubSpot", "Notion", "Jira"]
+  },
+  "experience": [
+    {
+      "company": "KAVALIER",
+      "location": "Chicago, IL",
+      "title": "Business Systems Analyst",
+      "dates": "Sep 2024 to Present",
+      "bullets": [
+        "Built end-to-end onboarding workflow reducing client setup from 3-5 hours to 1-2 hours",
+        "Implemented CRM automation and led data migration of 700+ client records"
+      ]
+    },
+    {
+      "company": "OLIVER WYMAN",
+      "location": "Chicago, IL",
+      "title": "Business Analyst",
+      "dates": "Jan 2022 to Aug 2024",
+      "bullets": [
+        "Developed predictive retention models identifying at-risk customer segments",
+        "Created executive dashboards translating complex datasets into actionable insights"
+      ]
+    },
+    {
+      "company": "DELOITTE",
+      "location": "Chicago, IL",
+      "title": "Analyst",
+      "dates": "Jun 2020 to Dec 2021",
+      "bullets": [
+        "Supported digital transformation initiatives across enterprise clients",
+        "Built financial models and executive dashboards for leadership decision-making"
+      ]
+    }
+  ],
+  "education": "Northwestern University | B.S. Computer Science | Sep 2017 to Jun 2020"
+}

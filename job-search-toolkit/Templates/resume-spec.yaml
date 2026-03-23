@@ -1,0 +1,85 @@
+# resume-spec.yaml
+# Measurements: twips (1" = 1440), font sizes: half-points (19 = 9.5pt)
+
+meta:
+  version: "1.0"
+
+page:
+  width: 12240
+  height: 15840
+  margins:
+    top: 720
+    bottom: 720
+    left: 720
+    right: 720
+
+defaults:
+  font: "Arial"
+  line_spacing: 240
+  line_rule: "auto"
+  spacing_after: 0
+  widow_control: false
+
+typography:
+  name:
+    size: 34
+    bold: true
+    alignment: "center"
+
+  contact:
+    size: 20
+    alignment: "center"
+    spacing_before: 33
+    separator: " | "
+
+  professional_title:
+    size: 24
+    bold: true
+    alignment: "center"
+    spacing_before: 77
+
+  summary:
+    size: 19
+    spacing_before: 77
+
+  section_header:
+    size: 22
+    bold: true
+    spacing_before_first: 200       # Same as subsequent for consistent section spacing
+    spacing_before_subsequent: 200  # ~10pt breathing room between sections
+
+  skill_category:
+    label_size: 19
+    label_bold: true
+    items_size: 19
+    spacing_before: 5.01
+
+  experience:
+    company:
+      size: 20
+      bold: true
+      spacing_before_first: 43.26
+      spacing_before_subsequent: 180  # ~0.125" breathing room between jobs
+      indent_left: 14.74
+    title:
+      size: 19
+      indent_left: 4.75
+    bullet:
+      size: 19
+      spacing_before_first: 18.27
+      spacing_before_subsequent: 0
+      line_spacing: 228.48
+
+  education:
+    size: 19
+
+bullets:
+  character: "\u25CF"
+  size: 16  # 8pt bullet character (half-points)
+  indent_left: 720
+  indent_hanging: 360
+  indent_right: 253.27
+
+numbering:
+  start_num_id: 1
+  increment_per_job: true
