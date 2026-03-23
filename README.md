@@ -172,3 +172,7 @@ Career Context Files (6 files generated from interview)
 ## License
 
 MIT
+
+---
+
+*Examples generated from commit `39aa0ce`.*
