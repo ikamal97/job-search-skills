@@ -30,7 +30,7 @@
 
 ## Step 0: Auto-Load Career Context (MANDATORY)
 
-**Read BEFORE any generation from `04 - Career/CONTEXT/`:**
+**Read BEFORE any generation from `~/Career/CONTEXT/`:**
 1. **Professional Background - Index.md** (always first)
 2. **Experience Details.md** - For achievements with metrics
 3. **AI-Automation Profile.md** - For AI/automation stories

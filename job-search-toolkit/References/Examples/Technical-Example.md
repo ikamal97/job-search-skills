@@ -27,8 +27,8 @@
 
 ## Cover Letter
 
-**Idrees Kamal**
-(555) 123-4567 | idrees.kamal@email.com | linkedin.com/in/idreeskamal | Seattle, WA
+**Your Name**
+(555) 123-4567 | user@example.com | linkedin.com/in/yourprofile | Seattle, WA
 
 January 7, 2026
 
@@ -49,7 +49,7 @@ Beyond individual contributions, I mentor 3 junior engineers and lead our data p
 I am excited about Stripe's technical challenges around global payment processing at unprecedented scale and would welcome the opportunity to discuss real-time data architecture solutions. I look forward to contributing to Stripe's mission of building the world's most robust financial infrastructure.
 
 Sincerely,
-Idrees Kamal
+Your Name
 
 ---
 
@@ -129,7 +129,7 @@ Score: 20 points
 
 ### 4. File Compliance (10 points)
 ```
-✓ File naming: Idrees_Kamal_CoverLetter_Stripe.docx = 5 points
+✓ File naming: Your_Name_CoverLetter_Stripe.docx = 5 points
 ✓ File format: .docx = 5 points
 
 Score: 10 points

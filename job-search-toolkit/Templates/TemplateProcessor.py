@@ -48,9 +48,9 @@ class ResumeTemplateProcessor:
             Path to template file or None if not found
         """
         search_locations = [
-            "/Users/idreeskamal/Downloads/Idrees_Kamal_BSA_Resume_01.02.26.docx",
+            "~/Downloads/Your_Name_Resume.docx",
             os.path.expanduser("~/Downloads/*Resume*.docx"),  # Fallback pattern
-            "/Users/idreeskamal/Documents/Obsidian Vault/04 - Personal Operating System/Career/*.docx"
+            "~/Career/CONTEXT/*.docx"
         ]
 
         if verbose:
@@ -150,13 +150,13 @@ class ResumeTemplateProcessor:
         name_node = self.doc["word/document.xml"].get_node(
             tag="w:p",
             line_number=range(1, 50),
-            contains="IDREES KAMAL"
+            contains="YOUR NAME"
         )
 
         if name_node:
             # Find the text node within
             for elem in name_node.getElementsByTagName("w:t"):
-                if "IDREES KAMAL" in elem.firstChild.nodeValue:
+                if "YOUR NAME" in elem.firstChild.nodeValue:
                     elem.firstChild.nodeValue = name.upper()
 
         # Replace contact line (paragraph 2)
@@ -213,7 +213,7 @@ class ResumeTemplateProcessor:
         summary_node = self.doc["word/document.xml"].get_node(
             tag="w:p",
             line_number=range(1, 200),
-            contains="Business Systems Analyst with Deloitte"
+            contains="Business Systems Analyst with Enterprise Corp"
         )
 
         if summary_node:
@@ -450,12 +450,12 @@ class ResumeTemplateProcessor:
         # Find education section
         edu_node = self.doc["word/document.xml"].get_node(
             tag="w:p",
-            contains="Northwestern University"
+            contains="University Name"
         )
 
         if edu_node:
             for elem in edu_node.getElementsByTagName("w:t"):
-                if "Northwestern University" in elem.firstChild.nodeValue:
+                if "University Name" in elem.firstChild.nodeValue:
                     elem.firstChild.nodeValue = education
                     break
 
@@ -543,9 +543,9 @@ def generate_resume_from_template(
             raise FileNotFoundError(
                 "Resume template not found.\n"
                 "Searched locations:\n"
-                "  1. /Users/idreeskamal/Downloads/Idrees_Kamal_BSA_Resume_01.02.26.docx\n"
+                "  1. ~/Downloads/Your_Name_Resume.docx\n"
                 "  2. ~/Downloads/*Resume*.docx\n"
-                "  3. Career folder (04 - Personal Operating System/Career/)\n"
+                "  3. ~/Career/CONTEXT/*.docx\n"
                 "Please ensure template exists in one of these locations."
             )
 

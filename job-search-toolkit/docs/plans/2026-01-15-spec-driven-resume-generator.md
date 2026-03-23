@@ -13,16 +13,16 @@
 ## Task 1: Add js-yaml Dependency
 
 **Files:**
-- Modify: `~/.claude/skills/JobSearchToolkit/Templates/package.json`
+- Modify: `./Templates/package.json`
 
 **Step 1: Check current package.json**
 
-Run: `cat ~/.claude/skills/JobSearchToolkit/Templates/package.json`
+Run: `cat ./Templates/package.json`
 Expected: See current dependencies (should have docx already)
 
 **Step 2: Install js-yaml**
 
-Run: `cd ~/.claude/skills/JobSearchToolkit/Templates && npm install js-yaml`
+Run: `cd ./Templates && npm install js-yaml`
 Expected: Package installed, package.json updated
 
 **Step 3: Verify installation**
@@ -43,7 +43,7 @@ git commit -m "chore: add js-yaml dependency for spec parsing"
 ## Task 2: Create resume-spec.yaml
 
 **Files:**
-- Create: `~/.claude/skills/JobSearchToolkit/Templates/resume-spec.yaml`
+- Create: `./Templates/resume-spec.yaml`
 
 **Step 1: Create the spec file**
 
@@ -136,7 +136,7 @@ numbering:
 
 **Step 2: Verify YAML is valid**
 
-Run: `cd ~/.claude/skills/JobSearchToolkit/Templates && node -e "const yaml = require('js-yaml'); const fs = require('fs'); const spec = yaml.load(fs.readFileSync('resume-spec.yaml', 'utf8')); console.log('Spec version:', spec.meta.version);"`
+Run: `cd ./Templates && node -e "const yaml = require('js-yaml'); const fs = require('fs'); const spec = yaml.load(fs.readFileSync('resume-spec.yaml', 'utf8')); console.log('Spec version:', spec.meta.version);"`
 Expected: "Spec version: 1.0"
 
 **Step 3: Commit**
@@ -152,7 +152,7 @@ git commit -m "feat: add resume formatting spec (YAML)"
 ## Task 3: Create ResumeGenerator.js - Spec Loader
 
 **Files:**
-- Create: `~/.claude/skills/JobSearchToolkit/Templates/ResumeGenerator.js`
+- Create: `./Templates/ResumeGenerator.js`
 
 **Step 1: Write spec loader with validation**
 
@@ -196,7 +196,7 @@ module.exports = { loadSpec };
 
 **Step 2: Test spec loader**
 
-Run: `cd ~/.claude/skills/JobSearchToolkit/Templates && node ResumeGenerator.js`
+Run: `cd ./Templates && node ResumeGenerator.js`
 Expected:
 ```
 Loaded spec version: 1.0
@@ -217,7 +217,7 @@ git commit -m "feat: add spec loader for ResumeGenerator"
 ## Task 4: Add Numbering Config Generator
 
 **Files:**
-- Modify: `~/.claude/skills/JobSearchToolkit/Templates/ResumeGenerator.js`
+- Modify: `./Templates/ResumeGenerator.js`
 
 **Step 1: Add numbering config function after spec loader**
 
@@ -267,7 +267,7 @@ if (require.main === module) {
 
 **Step 3: Test numbering config**
 
-Run: `cd ~/.claude/skills/JobSearchToolkit/Templates && node ResumeGenerator.js`
+Run: `cd ./Templates && node ResumeGenerator.js`
 Expected:
 ```
 Loaded spec version: 1.0
@@ -289,7 +289,7 @@ git commit -m "feat: add numbering config for bullet independence"
 ## Task 5: Add Header Builder
 
 **Files:**
-- Modify: `~/.claude/skills/JobSearchToolkit/Templates/ResumeGenerator.js`
+- Modify: `./Templates/ResumeGenerator.js`
 
 **Step 1: Add buildHeader function**
 
@@ -352,7 +352,7 @@ if (require.main === module) {
 
 **Step 3: Test header builder**
 
-Run: `cd ~/.claude/skills/JobSearchToolkit/Templates && node ResumeGenerator.js`
+Run: `cd ./Templates && node ResumeGenerator.js`
 Expected:
 ```
 Header paragraphs: 4
@@ -372,7 +372,7 @@ git commit -m "feat: add header section builder"
 ## Task 6: Add Skills Builder
 
 **Files:**
-- Modify: `~/.claude/skills/JobSearchToolkit/Templates/ResumeGenerator.js`
+- Modify: `./Templates/ResumeGenerator.js`
 
 **Step 1: Add buildSkills function**
 
@@ -419,7 +419,7 @@ Add to test block:
 
 **Step 3: Run test**
 
-Run: `cd ~/.claude/skills/JobSearchToolkit/Templates && node ResumeGenerator.js`
+Run: `cd ./Templates && node ResumeGenerator.js`
 Expected: `Skills paragraphs: 3`
 
 **Step 4: Commit**
@@ -435,7 +435,7 @@ git commit -m "feat: add skills section builder"
 ## Task 7: Add Experience Builder
 
 **Files:**
-- Modify: `~/.claude/skills/JobSearchToolkit/Templates/ResumeGenerator.js`
+- Modify: `./Templates/ResumeGenerator.js`
 
 **Step 1: Add buildExperience function**
 
@@ -503,7 +503,7 @@ Add to test block:
 
 **Step 3: Run test**
 
-Run: `cd ~/.claude/skills/JobSearchToolkit/Templates && node ResumeGenerator.js`
+Run: `cd ./Templates && node ResumeGenerator.js`
 Expected: `Experience paragraphs: 10` (1 header + 2 jobs × (company + title) + 3 bullets)
 
 **Step 4: Commit**
@@ -519,7 +519,7 @@ git commit -m "feat: add experience section builder with bullet independence"
 ## Task 8: Add Education Builder
 
 **Files:**
-- Modify: `~/.claude/skills/JobSearchToolkit/Templates/ResumeGenerator.js`
+- Modify: `./Templates/ResumeGenerator.js`
 
 **Step 1: Add buildEducation function**
 
@@ -545,7 +545,7 @@ Add to test block:
 ```javascript
   const testData = {
     // ... existing data
-    education: "Northwestern University | B.S. Computer Science | 2020"
+    education: "University Name | B.S. Computer Science | 2020"
   };
 
   const eduParas = buildEducation(testData, spec);
@@ -554,7 +554,7 @@ Add to test block:
 
 **Step 3: Run test**
 
-Run: `cd ~/.claude/skills/JobSearchToolkit/Templates && node ResumeGenerator.js`
+Run: `cd ./Templates && node ResumeGenerator.js`
 Expected: `Education paragraphs: 2`
 
 **Step 4: Commit**
@@ -570,7 +570,7 @@ git commit -m "feat: add education section builder"
 ## Task 9: Add Main Generator Function
 
 **Files:**
-- Modify: `~/.claude/skills/JobSearchToolkit/Templates/ResumeGenerator.js`
+- Modify: `./Templates/ResumeGenerator.js`
 
 **Step 1: Add generateResume async function**
 
@@ -625,7 +625,7 @@ git commit -m "feat: add main generateResume function"
 ## Task 10: Add CLI Entry Point
 
 **Files:**
-- Modify: `~/.claude/skills/JobSearchToolkit/Templates/ResumeGenerator.js`
+- Modify: `./Templates/ResumeGenerator.js`
 
 **Step 1: Replace test block with CLI entry point**
 
@@ -678,23 +678,23 @@ git commit -m "feat: add CLI entry point for ResumeGenerator"
 ## Task 11: Create Test Data File
 
 **Files:**
-- Create: `~/.claude/skills/JobSearchToolkit/Templates/test-resume-data.json`
+- Create: `./Templates/test-resume-data.json`
 
 **Step 1: Create comprehensive test data**
 
 ```json
 {
   "header": {
-    "name": "IDREES KAMAL",
+    "name": "YOUR NAME",
     "contact": {
       "location": "Chicago, IL",
-      "phone": "(773) 789-0400",
-      "email": "ikamal97@gmail.com",
-      "linkedin": "linkedin.com/in/idreeskamal"
+      "phone": "(555) 123-4567",
+      "email": "user@example.com",
+      "linkedin": "linkedin.com/in/yourprofile"
     }
   },
   "professional_title": "BUSINESS SYSTEMS ANALYST",
-  "summary": "Business Systems Analyst with Deloitte and Oliver Wyman background. Expert in CRM implementation, data migration, and workflow automation. Built end-to-end client onboarding systems reducing effort by 60%.",
+  "summary": "Business Systems Analyst with Big 4 and consulting firm background. Expert in CRM implementation, data migration, and workflow automation. Built end-to-end client onboarding systems reducing effort by 60%.",
   "skills": {
     "Implementation & Delivery": ["Client Onboarding", "Data Migration", "Requirements Gathering", "UAT"],
     "Technical Skills": ["SQL", "Python", "API Integrations", "Workflow Automation"],
@@ -702,7 +702,7 @@ git commit -m "feat: add CLI entry point for ResumeGenerator"
   },
   "experience": [
     {
-      "company": "KAVALIER",
+      "company": "COMPANY_A",
       "location": "Chicago, IL",
       "title": "Business Systems Analyst",
       "dates": "Sep 2024 to Present",
@@ -712,7 +712,7 @@ git commit -m "feat: add CLI entry point for ResumeGenerator"
       ]
     },
     {
-      "company": "OLIVER WYMAN",
+      "company": "CONSULTING_FIRM",
       "location": "Chicago, IL",
       "title": "Business Analyst",
       "dates": "Jan 2022 to Aug 2024",
@@ -722,7 +722,7 @@ git commit -m "feat: add CLI entry point for ResumeGenerator"
       ]
     },
     {
-      "company": "DELOITTE",
+      "company": "ENTERPRISE_CORP",
       "location": "Chicago, IL",
       "title": "Analyst",
       "dates": "Jun 2020 to Dec 2021",
@@ -732,7 +732,7 @@ git commit -m "feat: add CLI entry point for ResumeGenerator"
       ]
     }
   ],
-  "education": "Northwestern University | B.S. Computer Science | Sep 2017 to Jun 2020"
+  "education": "University Name | B.S. Your Major | Sep YYYY to Jun YYYY"
 }
 ```
 
@@ -753,8 +753,8 @@ git commit -m "test: add test data for resume generator"
 
 **Step 1: Generate test resume**
 
-Run: `cd ~/.claude/skills/JobSearchToolkit/Templates && node ResumeGenerator.js test-resume-data.json TestCompany`
-Expected: `/Users/idreeskamal/Downloads/IDREES_KAMAL_Resume_TestCompany.docx`
+Run: `cd ./Templates && node ResumeGenerator.js test-resume-data.json TestCompany`
+Expected: `~/Downloads/IDREES_KAMAL_Resume_TestCompany.docx`
 
 **Step 2: Verify file exists**
 
@@ -779,7 +779,7 @@ git commit -m "fix: address issues found in end-to-end test"
 ## Task 13: Update ResumeTailoring Workflow
 
 **Files:**
-- Modify: `~/.claude/skills/JobSearchToolkit/Workflows/ResumeTailoring.md`
+- Modify: `./Workflows/ResumeTailoring.md`
 
 **Step 1: Update Step 7 to use Node generator**
 
@@ -797,12 +797,12 @@ echo '$TAILORED_JSON' > /tmp/resume_data.json
 
 2. Generate DOCX:
 ```bash
-node ~/.claude/skills/JobSearchToolkit/Templates/ResumeGenerator.js /tmp/resume_data.json "CompanyName"
+node ./Templates/ResumeGenerator.js /tmp/resume_data.json "CompanyName"
 ```
 
 3. Verify one page (if needed):
 ```bash
-python ~/.claude/skills/JobSearchToolkit/Tools/verify_page_count.py ~/Downloads/Name_Resume_Company.docx
+python ./Tools/verify_page_count.py ~/Downloads/Name_Resume_Company.docx
 ```
 
 **File naming**: `FirstName_LastName_Resume_CompanyName.docx`
@@ -826,7 +826,7 @@ git commit -m "feat: update workflow to use spec-driven generator"
 
 **Step 1: Generate resume with current Python processor**
 
-Run: `cd ~/.claude/skills/JobSearchToolkit/Templates && python -c "from TemplateProcessor import generate_resume_from_template; ..." 2>/dev/null || echo "Python generator may need template file"`
+Run: `cd ./Templates && python -c "from TemplateProcessor import generate_resume_from_template; ..." 2>/dev/null || echo "Python generator may need template file"`
 
 **Step 2: Generate same resume with Node**
 
@@ -849,16 +849,16 @@ If differences found, adjust resume-spec.yaml values and regenerate.
 ## Task 15: Cleanup (After Validation)
 
 **Files:**
-- Delete: `~/.claude/skills/JobSearchToolkit/Templates/TemplateProcessor.py`
-- Delete: `~/.claude/skills/JobSearchToolkit/Templates/simple_template_processor.py`
+- Delete: `./Templates/TemplateProcessor.py`
+- Delete: `./Templates/simple_template_processor.py`
 
 **Step 1: Remove Python files (only after successful validation)**
 
-Run: `rm ~/.claude/skills/JobSearchToolkit/Templates/TemplateProcessor.py ~/.claude/skills/JobSearchToolkit/Templates/simple_template_processor.py`
+Run: `rm ./Templates/TemplateProcessor.py ./Templates/simple_template_processor.py`
 
 **Step 2: Remove pycache**
 
-Run: `rm -rf ~/.claude/skills/JobSearchToolkit/Templates/__pycache__`
+Run: `rm -rf ./Templates/__pycache__`
 
 **Step 3: Final commit**
 

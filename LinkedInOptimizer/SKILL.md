@@ -141,12 +141,24 @@ Run all 3 passes sequentially. Each pass has 3 binary (YES/NO) checks.
 
 ## Known Authenticity Constraints (DO NOT enhance)
 
+<!-- CUSTOMIZE: Fill in your own authenticity constraints from your Honest Gaps file. -->
+<!-- These prevent the optimizer from overclaiming in areas where your experience is limited. -->
+
 | Claim Area | Reality | LinkedIn Implication |
 |------------|---------|---------------------|
-| Oliver Wyman Python work | Minimal involvement, project stalled | Don't list "Python" as primary skill |
+| [Skill/Project 1] | [Honest assessment of involvement] | [What NOT to claim on profile] |
+| [Skill/Project 2] | [Honest assessment of proficiency] | [How to accurately represent it] |
+| [Tool/Domain 3] | [Actual scope of experience] | [What NOT to overclaim] |
+| [Management/Leadership] | [Actual scope, e.g., team size] | [Don't inflate title or scope] |
+
+**Example entries (replace with your own):**
+
+| Claim Area | Reality | LinkedIn Implication |
+|------------|---------|---------------------|
+| Python at [Previous Employer] | Minimal involvement, project stalled | Don't list "Python" as primary skill |
 | SQL proficiency | Foundational from coursework | List as "SQL (Foundational)" not "Expert" |
-| Enterprise CRM | Only SMB tools (Notion, GoHighLevel) | Don't claim "Enterprise CRM implementation" |
-| Management scope | Limited to 3 junior BAs at Deloitte | Don't position as "Team Lead" or "Manager" |
+| Enterprise CRM | Only used SMB tools | Don't claim "Enterprise CRM implementation" |
+| Management scope | Led 3 junior analysts at [Consulting Firm] | Don't position as "Team Lead" or "Manager" |
 
 ## Error Handling
 

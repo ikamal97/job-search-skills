@@ -98,7 +98,7 @@ This toolkit is designed to work alongside the `job-search-specialist` agent:
 │  CRITICAL: LOAD CONTEXT FILES BEFORE CREATING ANY              │
 │  RESUMES, COVER LETTERS, OR APPLICATION MATERIALS              │
 │                                                                 │
-│  Context folder: 04 - Career/CONTEXT/                          │
+│  Context folder: ~/Career/CONTEXT/  (CUSTOMIZE this path)       │
 │                                                                 │
 │  Files:                                                         │
 │  1. Professional Background - Index.md (ALWAYS load first)     │
@@ -203,7 +203,7 @@ User: "Tailor my resume for this Absorb Software Sales Operations Analyst role"
 → Enhances experience bullets with missing keywords
 → Updates professional summary with job-specific keywords
 → Final match: 83% (+16 percentage points improvement)
-→ Generates ATS-optimized DOCX: ~/Downloads/Idrees_Kamal_Resume_Absorb_Software.docx
+→ Generates ATS-optimized DOCX: ~/Downloads/Your_Name_Resume_Absorb_Software.docx
 → Provides ATS score (91/100), keyword analysis, and honesty report
 ```
 
@@ -272,9 +272,9 @@ User: "Tailor my resume for this Absorb Software Sales Operations Analyst role"
     "keywords_missing": ["CBAP"]
   },
   "files_generated": {
-    "markdown": "Idrees_Kamal_CoverLetter_Velera.md",
-    "docx": "Idrees_Kamal_CoverLetter_Velera.docx",
-    "pdf": "Idrees_Kamal_CoverLetter_Velera.pdf"
+    "markdown": "Your_Name_CoverLetter_Velera.md",
+    "docx": "Your_Name_CoverLetter_Velera.docx",
+    "pdf": "Your_Name_CoverLetter_Velera.pdf"
   },
   "company_research": {
     "mission": "Transform credit union technology",
@@ -310,8 +310,8 @@ User: "Tailor my resume for this Absorb Software Sales Operations Analyst role"
 
 The system auto-searches for template files in these locations:
 
-1. `/Users/idreeskamal/Downloads/Idrees_Kamal_BSA_Resume_01.02.26.docx`
-2. `/Users/idreeskamal/Documents/Obsidian Vault/04 - Personal Operating System/Career/` (any .docx file)
+1. `~/Downloads/Your_Name_Resume.docx`
+2. `~/Career/CONTEXT/` (any .docx file)
 
 **Note:** "Template" refers to the universal structure and formatting specification. Content is dynamic based on job description.
 
@@ -362,6 +362,6 @@ Uses `Templates/TemplateProcessor.py` module with Document library (OOXML) for s
 **File Output:**
 - Filename format: `FirstName_LastName_Resume_CompanyName.docx`
 - Location: `~/Downloads/`
-- Example: `Idrees_Kamal_Resume_Absorb_Software.docx`
+- Example: `Your_Name_Resume_Absorb_Software.docx`
 
 ---

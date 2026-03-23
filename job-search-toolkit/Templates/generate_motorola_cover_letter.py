@@ -47,13 +47,13 @@ def generate_cover_letter():
     # Body 1
     doc.add_paragraph()
     doc.add_paragraph(
-        "At Deloitte Consulting, I delivered business analysis for the Cisco EA 3.0 strategic IT transformation, "
+        "At a Big 4 firm Consulting, I delivered business analysis for the Cisco EA 3.0 strategic IT transformation, "
         "a high-visibility initiative 2 levels from the CEO. I authored BRDs and FRDs, coordinated UAT activities, "
         "and produced daily executive status reports that supported 2.5x software growth and 3x partner renewal "
         "rates. I also managed a team of 3 junior Business Analysts on an HSBC wealth management enterprise system "
         "implementation, reviewing requirements documentation and ensuring SDLC compliance across Agile sprints. "
-        "My Computer Science degree from Northwestern provides the technical foundation to understand complex "
-        "system architectures and translate them into business requirements. Most recently at Kavalier, I authored "
+        "My Computer Science degree provides the technical foundation to understand complex "
+        "system architectures and translate them into business requirements. Most recently at Company A, I authored "
         "technical specifications for CRM automation platforms, defined data models and workflow logic, and "
         "executed UAT-style testing with systematic defect tracking."
     )
@@ -64,7 +64,7 @@ def generate_cover_letter():
         "I am drawn to Motorola Solutions' role in public safety and enterprise communications technology. "
         "The IT Business Systems Analyst position offers the opportunity to apply my enterprise IT experience "
         "to mission-critical systems that protect communities and enable first responders. My background in "
-        "large-scale IT transformations at Deloitte, combined with my technical Computer Science foundation, "
+        "large-scale IT transformations at a Big 4 firm, combined with my technical Computer Science foundation, "
         "positions me well to support Motorola's complex system integrations and business requirements analysis."
     )
 
@@ -79,12 +79,12 @@ def generate_cover_letter():
     # Signature
     doc.add_paragraph()
     doc.add_paragraph("Sincerely,")
-    doc.add_paragraph("Idrees Kamal")
+    doc.add_paragraph("Your Name")
 
     # Save
-    output_dir = "/Users/idreeskamal/Documents/Obsidian Vault/04 - Career/Generated Assets/Motorola Solutions"
+    output_dir = "~/Career/Generated Assets/Motorola Solutions"
     os.makedirs(output_dir, exist_ok=True)
-    output_path = os.path.join(output_dir, "Idrees_Kamal_CoverLetter_Motorola_Solutions.docx")
+    output_path = os.path.join(output_dir, "Your_Name_CoverLetter_Motorola_Solutions.docx")
     doc.save(output_path)
 
     word_count = sum(len(p.text.split()) for p in doc.paragraphs)

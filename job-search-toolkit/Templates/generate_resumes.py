@@ -96,7 +96,7 @@ JOBS = {
 
 # Professional background from Master Context
 EXPERIENCE = {
-    "Kavalier": {
+    "Company A": {
         "title": "Business Systems Analyst",
         "dates": "Sep 2024 – Dec 2025",
         "location": "Chicago, IL",
@@ -104,12 +104,12 @@ EXPERIENCE = {
             "default": [
                 "Built end-to-end client onboarding workflow across GoHighLevel CRM and Stripe, automating waiver delivery, health questionnaire routing, and milestone tracking, reducing onboarding time from 3-5 hours to 1-2 hours per client",
                 "Implemented Notion-based system of record for client delivery tracking and program management, centralizing 12 active client files with automated Calendly integration via Zapier for appointment synchronization",
-                "Designed and launched Kavalier Lookbook Generator AI application (8,765 lines TypeScript/React), integrating Google Gemini API for personalized outfit recommendations with comprehensive Playwright test suite",
+                "Designed and launched Company A Lookbook Generator AI application (8,765 lines TypeScript/React), integrating Google Gemini API for personalized outfit recommendations with comprehensive Playwright test suite",
                 "Performed UAT-style testing and defect triage on GoHighLevel automations, proactively identifying and resolving pipeline stage triggers, tag assignments, and email sequence failures before client impact"
             ]
         }
     },
-    "Vicegerent": {
+    "Company B": {
         "title": "Business Operations Analyst",
         "dates": "Jun 2022 – Sep 2024",
         "location": "Chicago, IL",
@@ -122,7 +122,7 @@ EXPERIENCE = {
             ]
         }
     },
-    "Deloitte": {
+    "Enterprise Corp": {
         "title": "Business Technology Analyst",
         "dates": "Oct 2020 – Mar 2022",
         "location": "Chicago, IL",
@@ -134,7 +134,7 @@ EXPERIENCE = {
             ]
         }
     },
-    "Oliver_Wyman": {
+    "Consulting_Firm": {
         "title": "Senior Consultant",
         "dates": "Mar 2022 – Jun 2022",
         "location": "Chicago, IL",
@@ -146,14 +146,14 @@ EXPERIENCE = {
     }
 }
 
-EDUCATION = "Northwestern University, B.S. Computer Science, 2017–2020"
+EDUCATION = "University Name, B.S. Your Major, YYYY–2020"
 
 CONTACT = {
-    "name": "Idrees Kamal",
+    "name": "Your Name",
     "location": "Chicago, IL",
-    "phone": "(773) 789-0400",
-    "email": "ikamal97@gmail.com",
-    "linkedin": "linkedin.com/in/idreeskamal"
+    "phone": "(555) 123-4567",
+    "email": "user@example.com",
+    "linkedin": "linkedin.com/in/yourprofile"
 }
 
 
@@ -244,7 +244,7 @@ def create_tailored_resume(job_key, template_path, output_path):
     exp_header.paragraph_format.space_after = Pt(6)
 
     # Add each job
-    for job_name in ["Kavalier", "Vicegerent", "Deloitte", "Oliver_Wyman"]:
+    for job_name in ["Company A", "Company B", "Enterprise Corp", "Consulting_Firm"]:
         exp = EXPERIENCE[job_name]
 
         # Company name (bold, 10pt)
@@ -267,7 +267,7 @@ def create_tailored_resume(job_key, template_path, output_path):
 
         # Bullets (adjust count based on job)
         bullets = exp["bullets"]["default"]
-        num_bullets = len(bullets) if job_name != "Oliver_Wyman" else 1
+        num_bullets = len(bullets) if job_name != "Consulting_Firm" else 1
 
         for i in range(num_bullets):
             bullet_para = doc.add_paragraph(style='List Bullet')
@@ -300,12 +300,12 @@ def create_tailored_resume(job_key, template_path, output_path):
 
 def main():
     """Generate all 4 tailored resumes."""
-    template_path = "/Users/idreeskamal/Downloads/Idrees_Kamal_BSA_Resume_01.02.26.docx"
+    template_path = "~/Downloads/Your_Name_Resume.docx"
 
     results = []
     for job_key, job_data in JOBS.items():
         company_name = job_data["company"].replace(" ", "_")
-        output_path = f"/Users/idreeskamal/Downloads/Idrees_Kamal_Resume_{company_name}.docx"
+        output_path = f"~/Downloads/Your_Name_Resume_{company_name}.docx"
 
         print(f"\nGenerating resume for {job_data['company']} ({job_data['title']})...")
         create_tailored_resume(job_key, template_path, output_path)

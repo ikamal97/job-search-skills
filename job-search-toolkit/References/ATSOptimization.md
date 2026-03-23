@@ -162,7 +162,7 @@ FirstName_LastName_CoverLetter_CompanyName.docx
 ```
 
 **Examples:**
-- ✓ `Idrees_Kamal_CoverLetter_Velera.docx`
+- ✓ `Your_Name_CoverLetter_Velera.docx`
 - ✓ `John_Smith_CoverLetter_Google.docx`
 - ✗ `cover letter.docx` (too generic)
 - ✗ `CL_final_v3.docx` (unclear)
@@ -213,8 +213,8 @@ FirstName_LastName_CoverLetter_CompanyName.docx
 
 **1. Professional Header**
 ```
-Idrees Kamal
-(555) 123-4567 | idrees.kamal@email.com | linkedin.com/in/idreeskamal | Seattle, WA
+Your Name
+(555) 123-4567 | user@example.com | linkedin.com/in/yourprofile | Seattle, WA
 ```
 
 **2. Date**
@@ -247,7 +247,7 @@ Velera
 **7. Signature**
 ```
 Sincerely,
-Idrees Kamal
+Your Name
 ```
 
 ### Language Rules
@@ -404,7 +404,7 @@ Letter Analysis:
 - No tables, graphics ✓
 - Measurable achievements: 3 ✓
 - No clichés ✓
-- File: Idrees_Kamal_CoverLetter_Velera.docx ✓
+- File: Your_Name_CoverLetter_Velera.docx ✓
 
 Scoring:
 1. Keyword Match: (80 / 90) × 40 = 35.6 points

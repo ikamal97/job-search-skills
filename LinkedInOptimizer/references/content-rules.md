@@ -19,18 +19,31 @@ Every claim on LinkedIn must be:
 | **Skill Inflation** | Compare claimed proficiency to actual documented proficiency |
 | **Title Inflation** | Ensure job titles match actual titles held |
 
-### Known Authenticity Constraints (Idrees-Specific)
+### Known Authenticity Constraints (User-Specific)
 
 ┌─────────────────────────────────────────────────────────────────┐
 │  DO NOT ENHANCE THESE AREAS - Per Honest Gaps.md                │
+│                                                                 │
+│  CUSTOMIZE: Replace the example rows below with your own        │
+│  authenticity constraints from your Honest Gaps file.           │
 └─────────────────────────────────────────────────────────────────┘
 
 | Claim Area | Reality | LinkedIn Implication |
 |------------|---------|---------------------|
-| Oliver Wyman Python work | Minimal involvement, project stalled | Don't list "Python" as primary skill |
+| [Skill/Project 1] | [Honest assessment of involvement] | [What NOT to claim on profile] |
+| [Skill/Project 2] | [Honest assessment of proficiency] | [How to accurately represent it] |
+| [Tool/Domain 3] | [Actual scope of experience] | [What NOT to overclaim] |
+| [Management/Leadership] | [Actual scope, e.g., team size] | [Don't inflate title or scope] |
+| [Technical Training] | [Self-taught vs. formal] | [Don't claim expert-level titles] |
+
+**Example entries (replace with your own):**
+
+| Claim Area | Reality | LinkedIn Implication |
+|------------|---------|---------------------|
+| Python at [Previous Employer] | Minimal involvement, project stalled | Don't list "Python" as primary skill |
 | SQL proficiency | Foundational from coursework | List as "SQL (Foundational)" not "Expert" |
-| Enterprise CRM | Only SMB tools (Notion, GoHighLevel) | Don't claim "Enterprise CRM implementation" |
-| Management scope | Limited to 3 junior BAs at Deloitte | Don't position as "Team Lead" or "Manager" |
+| Enterprise CRM | Only used SMB tools (Notion, GoHighLevel) | Don't claim "Enterprise CRM implementation" |
+| Management scope | Led 3 junior analysts at [Consulting Firm] | Don't position as "Team Lead" or "Manager" |
 | AI/ML formal training | Self-taught through projects | Don't claim "AI Engineer" or "ML Expert" |
 
 ### Validation Before Output
@@ -117,7 +130,7 @@ AI consultant with AI experience in AI projects"
 **Good Example:**
 ```
 "I help companies implement AI automation that actually works.
-At Kavalier, I built systems that reduced manual work by 70%."
+At [Previous Company], I built systems that reduced manual work by 70%."
 ```
 
 ## Quality Standards
@@ -165,7 +178,7 @@ Use these to calibrate internal quality review:
 | Vague About | "'I love solving complex problems' - what problems? For who? What result?" |
 | Missing metrics | "'Improved processes' - by how much? This means nothing without numbers." |
 | First-person overuse | "Every sentence starts with 'I'. It's exhausting. Vary your structure." |
-| Overclaiming | "You managed '3 junior BAs' - that's not 'team leadership'. Be honest." |
+| Overclaiming | "You managed '3 junior analysts' - that's not 'team leadership'. Be honest." |
 
 ## Error Recovery
 

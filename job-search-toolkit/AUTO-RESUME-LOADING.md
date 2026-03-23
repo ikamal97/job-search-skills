@@ -36,22 +36,22 @@ When you request a cover letter, the system:
 
 **Resume Location:** ✅ FOUND
 ```
-/Users/idreeskamal/Documents/Obsidian Vault/04 - Personal Operating System/Career/Idrees_Kamal_BSA_Resume_01.02.26 copy.pdf
+~/Career/CONTEXT/Your_Name_BSA_Resume_01.02.26 copy.pdf
 ```
 
 **Extracted Data:**
-- **Name:** Idrees Kamal
-- **Phone:** (773) 789-0400
-- **Email:** ikamal97@gmail.com
-- **LinkedIn:** linkedin.com/in/idreeskamal
+- **Name:** Your Name
+- **Phone:** (555) 123-4567
+- **Email:** user@example.com
+- **LinkedIn:** linkedin.com/in/yourprofile
 - **Location:** Chicago, IL
 
-**Experience (5 positions):**
-1. Kavalier - Business Systems Analyst (Sep 2024 - Present)
-2. Vicegerent Custom Clothiers - Business Operations Analyst (Jun 2022 - Sep 2024)
-3. Oliver Wyman - Senior Consultant (Mar 2022 - Jun 2022)
-4. Deloitte Consulting LLP - Business Analyst (Oct 2020 - Mar 2022)
-5. Northwestern University - B.S. Computer Science (Sep 2017 - Jun 2020)
+**Experience (example - 5 positions):**
+1. Company A - Business Systems Analyst (Sep 2024 - Present)
+2. Company B - Business Operations Analyst (Jun 2022 - Sep 2024)
+3. Consulting Firm - Senior Consultant (Mar 2022 - Jun 2022)
+4. Enterprise Corp - Business Analyst (Oct 2020 - Mar 2022)
+5. University - B.S. Computer Science (Sep 2017 - Jun 2020)
 
 **Skills Extracted:** 20+ skills including BRD/FRD, Process Mapping, SDLC, Agile, UAT, SQL, Python, Jira, Confluence, Visio
 
@@ -73,10 +73,9 @@ Me:
   ✓ Auto-finds resume in Career folder
   ✓ Extracts all your info
   ✓ Uses YOUR real achievements from:
-    - Deloitte (BRDs/FRDs, UAT, process mapping)
-    - Kavalier (workflow automation, 3-5 hrs → 1-2 hrs)
-    - Vicegerent (CRM migration, 700+ records, Python)
-    - Oliver Wyman (cross-functional, 23% churn reduction)
+    - Your most recent role (key accomplishments)
+    - Previous roles (quantified metrics)
+    - All positions in your resume
   ✓ Generates tailored cover letter
 ```
 
@@ -96,7 +95,7 @@ management department that reduced prior authorization turnaround time by 40%...
 
 ### New Way (Your Real Achievements)
 ```markdown
-"In my role as Business Analyst at Deloitte Consulting, I authored BRDs and
+"In my role as Business Analyst at [Your Company], I authored BRDs and
 FRDs to translate stakeholder needs into functional requirements, built
 swimlane as-is/to-be process maps in Visio, and executed UAT by creating
 test plans and tracking defects in Jira..."
@@ -150,7 +149,7 @@ All skills from your resume's Skills section:
 ⚠ Warning: Resume not found in Career folder
 
 Searched locations:
-- 04 - Personal Operating System/Career/
+- ~/Career/
 - career/ (case-insensitive)
 - Files with "resume" in name
 
@@ -173,7 +172,7 @@ The system will ask for manual input rather than failing completely.
 **Keep Resume Updated:**
 - Update `Career/` folder whenever you update your resume
 - System always uses the **most recently modified** file
-- Name it clearly (e.g., `Idrees_Kamal_BSA_Resume_[date].pdf`)
+- Name it clearly (e.g., `Your_Name_BSA_Resume_[date].pdf`)
 
 **File Format:**
 - ✅ **PDF** (best - widely accepted, I can read it)
@@ -181,7 +180,7 @@ The system will ask for manual input rather than failing completely.
 - ✅ Markdown (works but less common for applications)
 
 **Location:**
-- ✅ Keep in `04 - Personal Operating System/Career/`
+- ✅ Keep in `~/Career/`
 - ✅ Or anywhere with "Career" or "resume" in path
 
 **Multiple Versions:**
@@ -203,9 +202,9 @@ CareFirst: [job URL]"
 ```
 Step 0: Auto-Load Resume
   ✓ Searching Career folder...
-  ✓ Found: Idrees_Kamal_BSA_Resume_01.02.26 copy.pdf
+  ✓ Found: Your_Name_BSA_Resume_01.02.26 copy.pdf
   ✓ Reading PDF...
-  ✓ Extracted contact: Idrees Kamal, (773) 789-0400, ikamal97@gmail.com
+  ✓ Extracted contact: Your Name, (555) 123-4567, user@example.com
   ✓ Extracted 5 experience entries
   ✓ Extracted 20+ skills
   ✓ User profile built
@@ -221,10 +220,10 @@ Step 2: Company Research
   ✓ Mission: Affordable, accessible healthcare
 
 Step 3: Match Your Achievements to Job
-  ✓ Deloitte: BRD/FRD authoring → matches "requirements gathering"
-  ✓ Deloitte: UAT execution → matches "testing"
-  ✓ Kavalier: Workflow automation → matches "process improvement"
-  ✓ Deloitte: Process mapping → matches "workflow mapping"
+  ✓ [Company D]: BRD/FRD authoring → matches "requirements gathering"
+  ✓ [Company D]: UAT execution → matches "testing"
+  ✓ [Company A]: Workflow automation → matches "process improvement"
+  ✓ [Company D]: Process mapping → matches "workflow mapping"
 
 Step 4-7: Generate, Optimize, Validate, Output
   ✓ 398-word cover letter generated
@@ -235,7 +234,7 @@ Step 4-7: Generate, Optimize, Validate, Output
 
 ### You Get:
 ```
-✓ Cover letter using YOUR real Deloitte/Kavalier/Vicegerent/Oliver Wyman achievements
+✓ Cover letter using YOUR real achievements from all your listed positions
 ✓ Your actual contact info (no placeholders)
 ✓ Tailored to CareFirst's utilization management role
 ✓ ATS-optimized with 97.8/100 score
@@ -302,7 +301,7 @@ def find_user_resume():
 
 ### "Resume not found"
 **Solution:** Ensure resume is in one of these locations:
-- `04 - Personal Operating System/Career/`
+- `~/Career/`
 - Any folder named "Career" (case-insensitive)
 - Any file with "resume" in filename
 

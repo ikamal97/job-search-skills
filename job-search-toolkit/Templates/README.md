@@ -28,7 +28,7 @@ pip3 install --break-system-packages defusedxml lxml
 Run the test script to verify everything works:
 
 ```bash
-cd /Users/idreeskamal/.claude/skills/JobSearchToolkit/Templates
+cd ./Templates
 python3 generate_resume.py
 ```
 
@@ -50,9 +50,9 @@ import os
 import sys
 
 # Set up PYTHONPATH
-DOCX_SKILL_ROOT = "/Users/idreeskamal/.claude/plugins/cache/anthropic-agent-skills/example-skills/69c0b1a06741/skills/docx"
+DOCX_SKILL_ROOT = "~/.claude/skills/docx"
 sys.path.insert(0, DOCX_SKILL_ROOT)
-sys.path.insert(0, "/Users/idreeskamal/.claude/skills/JobSearchToolkit/Templates")
+sys.path.insert(0, "./Templates")
 
 # Import generator
 from simple_template_processor import generate_resume_from_template
@@ -103,8 +103,8 @@ import os
 import sys
 
 # Set up environment
-DOCX_SKILL_ROOT = "/Users/idreeskamal/.claude/plugins/cache/anthropic-agent-skills/example-skills/69c0b1a06741/skills/docx"
-TEMPLATES_DIR = "/Users/idreeskamal/.claude/skills/JobSearchToolkit/Templates"
+DOCX_SKILL_ROOT = "~/.claude/skills/docx"
+TEMPLATES_DIR = os.path.dirname(os.path.abspath(__file__))
 
 sys.path.insert(0, DOCX_SKILL_ROOT)
 sys.path.insert(0, TEMPLATES_DIR)
@@ -126,8 +126,8 @@ output_file = generate_resume_from_template(
 
 The system auto-searches for template files in:
 
-1. `/Users/idreeskamal/Downloads/Idrees_Kamal_BSA_Resume_01.02.26.docx`
-2. `/Users/idreeskamal/Documents/Obsidian Vault/04 - Personal Operating System/Career/*.docx`
+1. `~/Downloads/Your_Name_Resume.docx`
+2. `~/Career/CONTEXT/*.docx`
 
 **Template refers to:** The universal structure and formatting specification. Content is dynamic based on job description.
 
@@ -232,7 +232,7 @@ pip3 install --break-system-packages defusedxml lxml
 
 **Solution:** Ensure this code runs before import:
 ```python
-sys.path.insert(0, "/Users/idreeskamal/.claude/plugins/cache/anthropic-agent-skills/example-skills/69c0b1a06741/skills/docx")
+sys.path.insert(0, "~/.claude/skills/docx")
 ```
 
 ### Error: "Template not found"
@@ -240,8 +240,8 @@ sys.path.insert(0, "/Users/idreeskamal/.claude/plugins/cache/anthropic-agent-ski
 **Cause:** Template file missing from expected locations.
 
 **Solution:** Verify template exists at:
-- `/Users/idreeskamal/Downloads/Idrees_Kamal_BSA_Resume_01.02.26.docx`, OR
-- `/Users/idreeskamal/Documents/Obsidian Vault/04 - Personal Operating System/Career/` (any .docx file)
+- `~/Downloads/Your_Name_Resume.docx`, OR
+- `~/Career/CONTEXT/` (any .docx file)
 
 ### Error: "Multiple nodes found"
 

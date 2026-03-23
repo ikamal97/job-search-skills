@@ -20,12 +20,12 @@ const doc = new Document({
       new Paragraph({
         alignment: AlignmentType.CENTER,
         spacing: { after: 0 },
-        children: [new TextRun({ text: "IDREES KAMAL", bold: true, size: 28 })]
+        children: [new TextRun({ text: "YOUR NAME", bold: true, size: 28 })]
       }),
       new Paragraph({
         alignment: AlignmentType.CENTER,
         spacing: { after: 240 },
-        children: [new TextRun({ text: "Chicago, IL | (773) 789-0400 | ikamal97@gmail.com | linkedin.com/in/idreeskamal", size: 20 })]
+        children: [new TextRun({ text: "Chicago, IL | (555) 123-4567 | user@example.com | linkedin.com/in/yourprofile", size: 20 })]
       }),
 
       // PROFESSIONAL SUMMARY (Enhanced with sales ops keywords)
@@ -92,7 +92,7 @@ const doc = new Document({
       // KAVALIER
       new Paragraph({
         spacing: { after: 0 },
-        children: [new TextRun({ text: "Business Systems Analyst | Kavalier | Chicago, IL | Sep 2024 to Present", bold: true, size: 20 })]
+        children: [new TextRun({ text: "Business Systems Analyst | Company A | Chicago, IL | Sep 2024 to Present", bold: true, size: 20 })]
       }),
       new Paragraph({
         spacing: { before: 60, after: 0, line: { line: 276, rule: "auto" } },
@@ -119,7 +119,7 @@ const doc = new Document({
       // VICEGERENT
       new Paragraph({
         spacing: { after: 0 },
-        children: [new TextRun({ text: "Business Operations Analyst | Vicegerent Custom Clothiers | Chicago, IL | Jun 2022 to Sep 2024", bold: true, size: 20 })]
+        children: [new TextRun({ text: "Business Operations Analyst | Company B | Chicago, IL | Jun 2022 to Sep 2024", bold: true, size: 20 })]
       }),
       new Paragraph({
         spacing: { before: 60, after: 0, line: { line: 276, rule: "auto" } },
@@ -146,7 +146,7 @@ const doc = new Document({
       // OLIVER WYMAN
       new Paragraph({
         spacing: { after: 0 },
-        children: [new TextRun({ text: "Senior Consultant | Oliver Wyman | Chicago, IL | Mar 2022 to Jun 2022", bold: true, size: 20 })]
+        children: [new TextRun({ text: "Senior Consultant | Consulting Firm | Chicago, IL | Mar 2022 to Jun 2022", bold: true, size: 20 })]
       }),
       new Paragraph({
         spacing: { before: 60, after: 0, line: { line: 276, rule: "auto" } },
@@ -166,7 +166,7 @@ const doc = new Document({
       // DELOITTE
       new Paragraph({
         spacing: { after: 0 },
-        children: [new TextRun({ text: "Business Analyst | Deloitte Consulting LLP | Chicago, IL | Oct 2020 to Mar 2022", bold: true, size: 20 })]
+        children: [new TextRun({ text: "Business Analyst | Enterprise Corp | Chicago, IL | Oct 2020 to Mar 2022", bold: true, size: 20 })]
       }),
       new Paragraph({
         spacing: { before: 60, after: 0, line: { line: 276, rule: "auto" } },
@@ -203,13 +203,13 @@ const doc = new Document({
         children: [new TextRun({ text: "EDUCATION", bold: true, size: 22 })]
       }),
       new Paragraph({
-        children: [new TextRun({ text: "Northwestern University | B.S. Computer Science | Sep 2017 to Jun 2020", size: 20 })]
+        children: [new TextRun({ text: "University Name | B.S. Your Major | Sep YYYY to Jun YYYY", size: 20 })]
       })
     ]
   }]
 });
 
 Packer.toBuffer(doc).then(buffer => {
-  fs.writeFileSync("/Users/idreeskamal/Downloads/Idrees_Kamal_Resume_Absorb_Software.docx", buffer);
-  console.log("✓ Tailored resume created: /Users/idreeskamal/Downloads/Idrees_Kamal_Resume_Absorb_Software.docx");
+  fs.writeFileSync("~/Downloads/Your_Name_Resume_Absorb_Software.docx", buffer);
+  console.log("✓ Tailored resume created: ~/Downloads/Your_Name_Resume_Absorb_Software.docx");
 });

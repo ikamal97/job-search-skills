@@ -46,10 +46,10 @@ def generate_cover_letter():
     # Body 1
     doc.add_paragraph()
     doc.add_paragraph(
-        "At Kavalier, I implemented an end-to-end analytics and tracking system across GoHighLevel CRM and "
+        "At Company A, I implemented an end-to-end analytics and tracking system across GoHighLevel CRM and "
         "Stripe, configuring conversion tracking, milestone metrics, and revenue reporting to monitor client "
         "lifecycle and business performance. I built data pipeline integrations connecting multiple platforms "
-        "via API, establishing automated data flow with real-time synchronization. At Deloitte, I built executive "
+        "via API, establishing automated data flow with real-time synchronization. At a Big 4 firm, I built executive "
         "dashboards and scenario models for Cisco's strategic transformation, tracking KPIs across multiple "
         "workstreams and presenting data-driven insights to C-suite stakeholders. My SQL knowledge and analytical "
         "background enable me to understand customer data requirements, troubleshoot tracking implementations, "
@@ -61,7 +61,7 @@ def generate_cover_letter():
     doc.add_paragraph(
         "I am drawn to HockeyStack's mission to provide unified analytics for B2B marketing and revenue teams. "
         "As someone who has built analytics infrastructure for my own businesses and consulted on data-driven "
-        "initiatives at Oliver Wyman and Deloitte, I understand the challenges marketing teams face with "
+        "initiatives at a consulting firm and Enterprise Corp, I understand the challenges marketing teams face with "
         "attribution and the value of connecting disparate data sources into a single source of truth. The "
         "Implementation Manager role offers the perfect blend of technical platform work and customer-facing "
         "consultation—both areas where I have demonstrated success."
@@ -78,12 +78,12 @@ def generate_cover_letter():
     # Signature
     doc.add_paragraph()
     doc.add_paragraph("Sincerely,")
-    doc.add_paragraph("Idrees Kamal")
+    doc.add_paragraph("Your Name")
 
     # Save
-    output_dir = "/Users/idreeskamal/Documents/Obsidian Vault/04 - Career/Generated Assets/HockeyStack"
+    output_dir = "~/Career/Generated Assets/HockeyStack"
     os.makedirs(output_dir, exist_ok=True)
-    output_path = os.path.join(output_dir, "Idrees_Kamal_CoverLetter_HockeyStack.docx")
+    output_path = os.path.join(output_dir, "Your_Name_CoverLetter_HockeyStack.docx")
     doc.save(output_path)
 
     word_count = sum(len(p.text.split()) for p in doc.paragraphs)

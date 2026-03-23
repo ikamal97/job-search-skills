@@ -15,7 +15,7 @@ pip3 install --break-system-packages defusedxml lxml
 
 **Verified working:**
 ```bash
-cd /Users/idreeskamal/.claude/skills/JobSearchToolkit/Templates
+cd ./Templates
 python3 generate_resume.py  # Should generate test resume successfully
 ```
 
@@ -32,8 +32,8 @@ import os
 import sys
 
 # Setup environment
-DOCX_SKILL_ROOT = "/Users/idreeskamal/.claude/plugins/cache/anthropic-agent-skills/example-skills/69c0b1a06741/skills/docx"
-TEMPLATES_DIR = "/Users/idreeskamal/.claude/skills/JobSearchToolkit/Templates"
+DOCX_SKILL_ROOT = "~/.claude/skills/docx"
+TEMPLATES_DIR = os.path.dirname(os.path.abspath(__file__))
 
 sys.path.insert(0, DOCX_SKILL_ROOT)
 sys.path.insert(0, TEMPLATES_DIR)
@@ -65,7 +65,7 @@ print(f"✓ Resume generated: {output_path}")
 
 Create a wrapper module in JobSearchToolkit:
 
-**File: `/Users/idreeskamal/.claude/skills/JobSearchToolkit/resume_generator.py`**
+**File: `./resume_generator.py`**
 
 ```python
 """Resume generator wrapper for JobSearchToolkit."""
@@ -74,7 +74,7 @@ import os
 import sys
 
 # Auto-setup environment
-_DOCX_SKILL = "/Users/idreeskamal/.claude/plugins/cache/anthropic-agent-skills/example-skills/69c0b1a06741/skills/docx"
+_DOCX_SKILL = "~/.claude/skills/docx"
 _TEMPLATES = os.path.join(os.path.dirname(__file__), "Templates")
 
 if _DOCX_SKILL not in sys.path:
@@ -240,8 +240,8 @@ def _insert_experience_section(doc, experience_list, insert_after_paragraph_inde
 import os
 import sys
 
-DOCX_SKILL = "/Users/idreeskamal/.claude/plugins/cache/anthropic-agent-skills/example-skills/69c0b1a06741/skills/docx"
-TEMPLATES = "/Users/idreeskamal/.claude/skills/JobSearchToolkit/Templates"
+DOCX_SKILL = "~/.claude/skills/docx"
+TEMPLATES = "./Templates"
 
 sys.path.insert(0, DOCX_SKILL)
 sys.path.insert(0, TEMPLATES)
@@ -251,19 +251,19 @@ from simple_template_processor import generate_resume_from_template
 # Simulate ResumeTailoring workflow output
 test_data = {
     "header": {
-        "name": "IDREES KAMAL",
+        "name": "YOUR NAME",
         "contact": {
             "location": "Chicago, IL",
-            "phone": "(773) 789-0400",
-            "email": "ikamal97@gmail.com",
-            "linkedin": "linkedin.com/in/idreeskamal"
+            "phone": "(555) 123-4567",
+            "email": "user@example.com",
+            "linkedin": "linkedin.com/in/yourprofile"
         }
     },
     "professional_title": "SENIOR BUSINESS SYSTEMS ANALYST",
     "summary": "Senior Business Systems Analyst with 6+ years of experience in Salesforce CRM implementations...",
     "skills": {},  # Placeholder
     "experience": [],  # Placeholder
-    "education": "Northwestern University | B.S. Computer Science | Sep 2017 to Jun 2020"
+    "education": "University Name | B.S. Your Major | Sep YYYY to Jun YYYY"
 }
 
 result = generate_resume_from_template(

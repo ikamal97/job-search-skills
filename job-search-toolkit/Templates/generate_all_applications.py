@@ -13,8 +13,8 @@ import os
 import sys
 
 # Set up PYTHONPATH
-DOCX_SKILL_ROOT = "/Users/idreeskamal/.claude/plugins/cache/anthropic-agent-skills/example-skills/69c0b1a06741/skills/docx"
-TEMPLATES_DIR = "/Users/idreeskamal/.claude/skills/JobSearchToolkit/Templates"
+DOCX_SKILL_ROOT = "os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'lib', 'docx')"
+TEMPLATES_DIR = os.path.dirname(os.path.abspath(__file__))
 
 sys.path.insert(0, DOCX_SKILL_ROOT)
 sys.path.insert(0, TEMPLATES_DIR)
@@ -22,7 +22,7 @@ sys.path.insert(0, TEMPLATES_DIR)
 from simple_template_processor import generate_resume_from_template
 
 # Base output directory
-BASE_OUTPUT_DIR = "/Users/idreeskamal/Documents/Obsidian Vault/04 - Career/Generated Assets"
+BASE_OUTPUT_DIR = "~/Career/Generated Assets"
 
 # Job data for each company
 JOBS = {
@@ -37,20 +37,20 @@ JOBS = {
             "Tools": ["GoHighLevel", "Notion", "Stripe", "Calendly", "Zapier", "Jira", "Confluence"]
         },
         "experience_bullets": {
-            "KAVALIER": [
+            "COMPANY_A": [
                 "Built an end-to-end SaaS onboarding workflow across GoHighLevel and Stripe, automating client onboarding, payment processing, and waiver delivery after payment",
                 "Implemented a Notion CRM system of record for client delivery by defining a structured data model, reducing missed onboarding steps through standardized fields and stage-gate completion rules",
                 "Performed UAT-style testing and defect triage on GoHighLevel automations, reducing onboarding effort from 3-5 hours to 1-2 hours per client through workflow automation"
             ],
-            "VICEGERENT CUSTOM CLOTHIERS": [
+            "COMPANY_B": [
                 "Implemented a Notion-based CRM and operations hub and migrated 700+ client records from Google Sheets, establishing lifecycle stages and standardized fields to centralize customer and order tracking",
                 "Built client onboarding automations using Calendly and Zapier integrations, streamlining appointment scheduling and reducing manual coordination by 80%",
                 "Authored SOPs and training documentation for order entry, production updates, and alterations tracking, enabling consistent execution across the team"
             ],
-            "OLIVER WYMAN": [
+            "CONSULTING_FIRM": [
                 "Drove cross-functional alignment across Product, Engineering, and Marketing to define customer retention strategy, quantifying revenue impact and prioritizing initiatives projected to reduce churn by 23%"
             ],
-            "DELOITTE CONSULTING LLP": [
+            "ENTERPRISE_CORP": [
                 "Led implementation of enterprise software systems for Fortune 500 clients, coordinating discovery, configuration, UAT, and go-live across technical and business stakeholders",
                 "Authored BRDs and FRDs to translate stakeholder needs into functional requirements, including business rules, functional specs, and edge cases",
                 "Executed UAT by creating test plans and test cases and tracking defects in Jira, ensuring quality delivery and successful go-live",
@@ -69,20 +69,20 @@ JOBS = {
             "Methodologies": ["Agile", "requirements gathering", "stakeholder management", "UAT", "problem-solving"]
         },
         "experience_bullets": {
-            "KAVALIER": [
+            "COMPANY_A": [
                 "Built end-to-end workflow automation across GoHighLevel and Stripe APIs, integrating payment processing, CRM automation, and client onboarding through no-code configuration",
                 "Implemented Notion API integrations with Calendly and Zapier to automate client scheduling, data sync, and lifecycle stage tracking",
                 "Performed UAT-style testing and troubleshooting on workflow automations, identifying and resolving integration issues to reduce onboarding effort by 60%"
             ],
-            "VICEGERENT CUSTOM CLOTHIERS": [
+            "COMPANY_B": [
                 "Built client onboarding automations using Calendly API and Zapier integrations, connecting scheduling data to Notion CRM for automated client record creation",
                 "Implemented data migration from Google Sheets to Notion using API-based ETL scripts, migrating 700+ client records with validation and error handling",
                 "Authored technical documentation and SOPs for order entry, production workflows, and API integration setup"
             ],
-            "OLIVER WYMAN": [
+            "CONSULTING_FIRM": [
                 "Developed technical solutions for customer retention strategy, building Python-based predictive models using behavioral data to identify at-risk customer segments"
             ],
-            "DELOITTE CONSULTING LLP": [
+            "ENTERPRISE_CORP": [
                 "Conducted technical discovery sessions with stakeholders to elicit requirements and define functional specifications for enterprise software implementations",
                 "Built demonstrations and proofs of concept for technical solutions, presenting to stakeholders and iterating based on feedback",
                 "Translated business requirements into user stories and acceptance criteria for technical implementation teams",
@@ -102,21 +102,21 @@ JOBS = {
             "Tools": ["Jira", "Confluence", "Excel", "Python", "Visio", "SharePoint"]
         },
         "experience_bullets": {
-            "KAVALIER": [
+            "COMPANY_A": [
                 "Built an end-to-end onboarding workflow across GoHighLevel and Stripe, automating onboarding and waiver delivery after payment and enforcing stage-gate rules before delivery could begin",
                 "Built a Notion-based system of record for client delivery by defining a structured CRM data model, reducing missed onboarding and delivery steps through standardized fields and required-stage completion",
                 "Performed UAT-style testing and defect triage on GoHighLevel automations, reducing onboarding effort from 3-5 hours to 1-2 hours per client and saving ~3-5 hours per week through workflow automation"
             ],
-            "VICEGERENT CUSTOM CLOTHIERS": [
+            "COMPANY_B": [
                 "Implemented a Notion-based CRM and operations hub and migrated 700+ client records from Google Sheets, establishing lifecycle stages and standardized fields to centralize customer, order, and production tracking",
                 "Cleaned and normalized legacy data during migration using Python scripts and spreadsheet governance rules, then owned ongoing data quality to ensure consistent entry by the team",
                 "Authored SOPs and training documentation for order entry, production updates, and alterations tracking, enabling consistent execution and reducing errors caused by pen-and-paper handoffs"
             ],
-            "OLIVER WYMAN": [
+            "CONSULTING_FIRM": [
                 "Drove cross-functional alignment across Product, Engineering, and Marketing to define customer retention strategy, quantifying revenue impact and prioritizing initiatives projected to reduce churn by 23%",
                 "Developed predictive retention models in Python using behavioral data to identify at-risk customer segments for targeted intervention strategies"
             ],
-            "DELOITTE CONSULTING LLP": [
+            "ENTERPRISE_CORP": [
                 "Authored BRDs and FRDs in Word to translate stakeholder needs into functional requirements, including business rules, functional specs, and edge cases",
                 "Built swimlane as-is/to-be process maps in Visio and translated requirements into user stories and acceptance criteria to guide implementation planning",
                 "Executed UAT by creating test plans and test cases and tracking defects and results in Jira; built executive dashboards and scenario models",
@@ -135,21 +135,21 @@ JOBS = {
             "Tools": ["GoHighLevel", "Notion", "Stripe", "Excel", "Python", "Jira", "Confluence"]
         },
         "experience_bullets": {
-            "KAVALIER": [
+            "COMPANY_A": [
                 "Built end-to-end analytics tracking across GoHighLevel and Stripe, implementing revenue reporting dashboards and client lifecycle analytics to track conversion rates and retention metrics",
                 "Implemented a Notion CRM system with structured data models for client tracking, lifecycle stages, and pipeline analytics, enabling data-driven business decisions",
                 "Performed UAT-style testing and data validation on analytics automations, ensuring accurate reporting and reducing manual data entry effort by 60%"
             ],
-            "VICEGERENT CUSTOM CLOTHIERS": [
+            "COMPANY_B": [
                 "Implemented a Notion-based CRM and analytics hub and migrated 700+ client records from Google Sheets, establishing data pipelines for customer, order, and revenue tracking",
                 "Built marketing analytics dashboards tracking social media performance across Instagram, Facebook, TikTok, and LinkedIn, measuring engagement rates, impressions, and follower growth",
                 "Authored SOPs and training documentation for data entry, analytics tracking, and reporting processes, ensuring data quality and consistent analytics"
             ],
-            "OLIVER WYMAN": [
+            "CONSULTING_FIRM": [
                 "Drove implementation of customer retention analytics strategy, building predictive models in Python to identify at-risk customer segments and track retention metrics",
                 "Quantified revenue impact of retention initiatives and built analytics dashboards for executive stakeholders, projecting 23% churn reduction"
             ],
-            "DELOITTE CONSULTING LLP": [
+            "ENTERPRISE_CORP": [
                 "Led implementation of enterprise analytics platforms for Fortune 500 clients, coordinating discovery, configuration, UAT, and go-live across technical and business stakeholders",
                 "Built executive dashboards and scenario models in Excel to visualize business metrics and support data-driven decision-making",
                 "Executed UAT by creating test plans and test cases for analytics implementations, tracking defects in Jira and ensuring data accuracy",
@@ -167,7 +167,7 @@ def generate_resume_for_company(company_name, job_data):
     # Build experience section with tailored bullets
     experience = []
     for exp_company, bullets in job_data["experience_bullets"].items():
-        if exp_company == "KAVALIER":
+        if exp_company == "COMPANY_A":
             experience.append({
                 "company": exp_company,
                 "location": "Chicago, IL",
@@ -175,7 +175,7 @@ def generate_resume_for_company(company_name, job_data):
                 "dates": "Sep 2024 to Present",
                 "bullets": bullets
             })
-        elif exp_company == "VICEGERENT CUSTOM CLOTHIERS":
+        elif exp_company == "COMPANY_B":
             experience.append({
                 "company": exp_company,
                 "location": "Chicago, IL",
@@ -183,7 +183,7 @@ def generate_resume_for_company(company_name, job_data):
                 "dates": "Jun 2022 to Sep 2024",
                 "bullets": bullets
             })
-        elif exp_company == "OLIVER WYMAN":
+        elif exp_company == "CONSULTING_FIRM":
             experience.append({
                 "company": exp_company,
                 "location": "Chicago, IL",
@@ -191,7 +191,7 @@ def generate_resume_for_company(company_name, job_data):
                 "dates": "Mar 2022 to Jun 2022",
                 "bullets": bullets
             })
-        elif exp_company == "DELOITTE CONSULTING LLP":
+        elif exp_company == "ENTERPRISE_CORP":
             experience.append({
                 "company": exp_company,
                 "location": "Chicago, IL",
@@ -203,19 +203,19 @@ def generate_resume_for_company(company_name, job_data):
     # Build complete resume data
     resume_data = {
         "header": {
-            "name": "IDREES KAMAL",
+            "name": "YOUR NAME",
             "contact": {
                 "location": "Chicago, IL",
-                "phone": "(773) 789-0400",
-                "email": "ikamal97@gmail.com",
-                "linkedin": "linkedin.com/in/idreeskamal"
+                "phone": "(555) 123-4567",
+                "email": "user@example.com",
+                "linkedin": "linkedin.com/in/yourprofile"
             }
         },
         "professional_title": job_data["professional_title"],
         "summary": job_data["summary"],
         "skills": job_data["skills"],
         "experience": experience,
-        "education": "Northwestern University | B.S. Computer Science | Sep 2017 to Jun 2020"
+        "education": "University Name | B.S. Your Major | Sep YYYY to Jun YYYY"
     }
 
     # Generate resume

@@ -207,10 +207,10 @@ Each paragraph has complex XML formatting. Example bullet paragraph:
 **Why each job needs different numId:**
 
 Template uses:
-- Kavalier: `numId="4"`
-- Vicegerent: `numId="1"`
-- Oliver Wyman: `numId="3"`
-- Deloitte: `numId="2"`
+- Company A: `numId="4"`
+- Company B: `numId="1"`
+- Consulting Firm: `numId="3"`
+- Enterprise Corp: `numId="2"`
 
 This keeps bullet lists **independent**. If they all used `numId="1"`, Word would think it's ONE big list continuing across all jobs.
 

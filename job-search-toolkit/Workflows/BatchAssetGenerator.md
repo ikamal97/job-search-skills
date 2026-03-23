@@ -50,7 +50,7 @@
 ### Step 1: Load and Filter Jobs
 
 ```
-1. Glob: 04 - Career/Job Applications/*.md
+1. Glob: ~/Career/Job Applications/*.md
 2. For each file:
    a. Parse YAML frontmatter
    b. Check if status == "Not Applied"
@@ -79,12 +79,12 @@ For each job, spawn TWO parallel Task agents:
 Task 1 (Resume):
   - Invoke ResumeTailoring workflow
   - Input: application_url, company
-  - Output: ~/Downloads/Idrees_Kamal_Resume_[Company].docx
+  - Output: ~/Downloads/Your_Name_Resume_[Company].docx
 
 Task 2 (Cover Letter):
   - Invoke CoverLetterGenerator workflow
   - Input: application_url, company
-  - Output: ~/Downloads/Idrees_Kamal_CoverLetter_[Company].docx
+  - Output: ~/Downloads/Your_Name_CoverLetter_[Company].docx
 ```
 
 Wait for both to complete before post-processing.
@@ -100,7 +100,7 @@ Process 3-5 jobs concurrently:
 
 **Create folder:**
 ```bash
-mkdir -p "04 - Career/Generated Assets/[Company_Sanitized]/"
+mkdir -p "~/Career/Generated Assets/[Company_Sanitized]/"
 ```
 
 **Company name sanitization:**
@@ -109,11 +109,11 @@ mkdir -p "04 - Career/Generated Assets/[Company_Sanitized]/"
 
 **Move files:**
 ```bash
-mv ~/Downloads/Idrees_Kamal_Resume_[Company].docx \
-   "04 - Career/Generated Assets/[Company]/Idrees_Kamal_Resume_[Company].docx"
+mv ~/Downloads/Your_Name_Resume_[Company].docx \
+   "~/Career/Generated Assets/[Company]/Your_Name_Resume_[Company].docx"
 
-mv ~/Downloads/Idrees_Kamal_CoverLetter_[Company].docx \
-   "04 - Career/Generated Assets/[Company]/Idrees_Kamal_CoverLetter_[Company].docx"
+mv ~/Downloads/Your_Name_CoverLetter_[Company].docx \
+   "~/Career/Generated Assets/[Company]/Your_Name_CoverLetter_[Company].docx"
 ```
 
 ### Step 4: Update Frontmatter
@@ -121,8 +121,8 @@ mv ~/Downloads/Idrees_Kamal_CoverLetter_[Company].docx \
 Add to job note YAML frontmatter:
 
 ```yaml
-resume-path: "04 - Career/Generated Assets/[Company]/Idrees_Kamal_Resume_[Company].docx"
-cover-letter-path: "04 - Career/Generated Assets/[Company]/Idrees_Kamal_CoverLetter_[Company].docx"
+resume-path: "~/Career/Generated Assets/[Company]/Your_Name_Resume_[Company].docx"
+cover-letter-path: "~/Career/Generated Assets/[Company]/Your_Name_CoverLetter_[Company].docx"
 ```
 
 **Frontmatter update logic:**
@@ -148,8 +148,8 @@ cover-letter-path: "04 - Career/Generated Assets/[Company]/Idrees_Kamal_CoverLet
   "jobs": {
     "Stripe - Revenue Operations Analyst": {
       "status": "completed",
-      "resume_path": "04 - Career/Generated Assets/Stripe/...",
-      "cover_letter_path": "04 - Career/Generated Assets/Stripe/..."
+      "resume_path": "~/Career/Generated Assets/Stripe/...",
+      "cover_letter_path": "~/Career/Generated Assets/Stripe/..."
     },
     "Apollo.io - Sales Operations Manager": {
       "status": "failed",
@@ -230,7 +230,7 @@ This workflow orchestrates:
 
 Both workflows auto-load:
 - User resume from Career folder
-- Career context files from `04 - Career/CONTEXT/` (Index, Experience Details, Technical Skills, Honest Gaps)
+- Career context files from `~/Career/CONTEXT/` (Index, Experience Details, Technical Skills, Honest Gaps)
 - Job requirements via URL parsing
 
 ---

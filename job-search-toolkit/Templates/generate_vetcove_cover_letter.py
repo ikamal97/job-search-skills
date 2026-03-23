@@ -60,13 +60,13 @@ def generate_cover_letter():
     # Body paragraph 1: Requirements alignment
     doc.add_paragraph()
     body1 = doc.add_paragraph(
-        "In my current role at Kavalier, I built a complete SaaS onboarding system across GoHighLevel CRM and Stripe, "
+        "In my current role at Company A, I built a complete SaaS onboarding system across GoHighLevel CRM and Stripe, "
         "automating client workflows from discovery through go-live. This reduced onboarding time from 3-5 hours to "
-        "1-2 hours per client while maintaining high-quality implementation standards. Previously at Vicegerent, "
+        "1-2 hours per client while maintaining high-quality implementation standards. Previously at Company B, "
         "I led a digital transformation migrating 750+ client records to a Notion CRM platform with automated "
         "lifecycle stages and Zapier integrations. My hands-on experience with CRM configuration, data migration, "
         "and workflow automation directly aligns with Vetcove's need for technical implementation expertise. "
-        "My Computer Science background from Northwestern enables me to troubleshoot technical issues independently "
+        "My Computer Science background enables me to troubleshoot technical issues independently "
         "and communicate effectively with both customers and engineering teams."
     )
 
@@ -75,10 +75,10 @@ def generate_cover_letter():
     body2 = doc.add_paragraph(
         "I am drawn to Vetcove's mission to modernize veterinary purchasing through technology. The opportunity "
         "to work with SMB veterinary practices resonates with my experience serving small business clients at "
-        "Vicegerent and Kavalier, where I managed end-to-end customer relationships and understood the importance "
+        "Company B and Company A, where I managed end-to-end customer relationships and understood the importance "
         "of seamless platform adoption. Vetcove's B2B marketplace model requires both technical platform knowledge "
-        "and strong consultative skills—strengths I've developed through my consulting background at Deloitte and "
-        "Oliver Wyman combined with hands-on SaaS implementation work."
+        "and strong consultative skills—strengths I've developed through my consulting background at a Big 4 firm and "
+        "Consulting Firm combined with hands-on SaaS implementation work."
     )
 
     # Closing paragraph
@@ -92,12 +92,12 @@ def generate_cover_letter():
     # Signature
     doc.add_paragraph()
     doc.add_paragraph("Sincerely,")
-    doc.add_paragraph("Idrees Kamal")
+    doc.add_paragraph("Your Name")
 
     # Save
-    output_dir = "/Users/idreeskamal/Documents/Obsidian Vault/04 - Career/Generated Assets/Vetcove"
+    output_dir = "~/Career/Generated Assets/Vetcove"
     os.makedirs(output_dir, exist_ok=True)
-    output_path = os.path.join(output_dir, "Idrees_Kamal_CoverLetter_Vetcove.docx")
+    output_path = os.path.join(output_dir, "Your_Name_CoverLetter_Vetcove.docx")
 
     doc.save(output_path)
 

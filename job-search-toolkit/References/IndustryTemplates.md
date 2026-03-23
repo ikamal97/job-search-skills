@@ -512,7 +512,7 @@ example, I [additional client impact example].
 
 **Example:**
 ```
-In my current role at Deloitte, I led a 6-month technology transformation
+In my current role at a Big 4 firm, I led a 6-month technology transformation
 engagement for a $5B healthcare payer, identifying $80M in annual cost savings
 through cloud migration and process automation. Specifically, I conducted
 current-state analysis across 12 legacy systems, developed a 3-year roadmap with

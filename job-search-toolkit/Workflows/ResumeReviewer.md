@@ -29,7 +29,7 @@
 
 **Auto-find logic** (in order):
 1. Most recent `.docx` with "resume" in filename in `~/Downloads/`
-2. Most recent `.docx` with "resume" in filename in `04 - Career/`
+2. Most recent `.docx` with "resume" in filename in `~/Career/`
 3. Explicit path if provided by user
 
 ```bash
@@ -43,7 +43,7 @@ ls -t ~/Downloads/*[Rr]esume*.docx 2>/dev/null | head -1
 ## Step 1: Load Context
 
 1. **Parse resume** - Extract all content (summary, skills, experience bullets)
-2. **Load Career Context** from `04 - Career/CONTEXT/`:
+2. **Load Career Context** from `~/Career/CONTEXT/`:
    - Professional Background - Index.md (always first)
    - Experience Details.md (for cross-checking achievements)
    - Honest Gaps.md (for authenticity constraints)
@@ -118,29 +118,29 @@ Prepare input JSON with corrected content:
   "summary": "[Rewritten summary with impact]",
   "skills": { ... },
   "titles": {
-    "kavalier": "[Appropriate title]",
-    "vicegerent": "[Appropriate title]"
+    "job1": "[Appropriate title]",
+    "job2": "[Appropriate title]"
   },
   "bullets": [
-    ["[Improved Kavalier bullets]"],
-    ["[Improved Vicegerent bullets]"],
-    ["[Improved Oliver Wyman bullets]"],
-    ["[Improved Deloitte bullets]"]
+    ["[Improved Company A bullets]"],
+    ["[Improved Company B bullets]"],
+    ["[Improved Consulting Firm bullets]"],
+    ["[Improved Enterprise Corp bullets]"]
   ]
 }
 ```
 
 Generate:
 ```bash
-node ~/.claude/skills/JobSearchToolkit/Templates/ResumeGenerator.js /tmp/resume_data.json "[CompanyName]"
+node ./Templates/ResumeGenerator.js /tmp/resume_data.json "[CompanyName]"
 ```
 
 ### File Naming
 
 | Mode | Filename |
 |------|----------|
-| General | `Idrees_Kamal_Resume.docx` |
-| Job-Specific | `Idrees_Kamal_Resume_[Company].docx` |
+| General | `Your_Name_Resume.docx` |
+| Job-Specific | `Your_Name_Resume_[Company].docx` |
 
 **Output location**: `~/Downloads/`
 
@@ -170,7 +170,7 @@ node ~/.claude/skills/JobSearchToolkit/Templates/ResumeGenerator.js /tmp/resume_
 - Missing keywords: [list]
 - Fit score: X/10
 
-📄 Revised resume: ~/Downloads/Idrees_Kamal_Resume.docx
+📄 Revised resume: ~/Downloads/Your_Name_Resume.docx
 ```
 
 ---

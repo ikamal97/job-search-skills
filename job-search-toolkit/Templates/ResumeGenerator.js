@@ -9,56 +9,59 @@ const path = require('path');
 const os = require('os');
 
 // ─────────────────────────────────────────────────────────
-// 0. LOCKED RESUME DATA (NEVER MODIFY AT RUNTIME)
+// 0. LOCKED RESUME DATA - CUSTOMIZE FOR YOUR CAREER
 // ─────────────────────────────────────────────────────────
-// These fields are hardcoded and enforced by the generator.
+// CUSTOMIZE: Replace these example values with your own career data.
+// These fields are enforced by the generator at runtime.
 // Input JSON only provides: professional_title, summary, skills, bullets
 
 const LOCKED_RESUME_DATA = {
   header: {
-    name: "Idrees Kamal",
+    name: "Your Name",                           // CUSTOMIZE: Your full name
     contact: {
-      location: "Chicago, IL",
-      phone: "(773) 789-0400",
-      email: "ikamal97@gmail.com",
-      linkedin: "linkedin.com/in/idreeskamal"
+      location: "City, ST",                      // CUSTOMIZE: Your city, state
+      phone: "(555) 123-4567",                   // CUSTOMIZE: Your phone number
+      email: "user@example.com",                 // CUSTOMIZE: Your email
+      linkedin: "linkedin.com/in/yourprofile"    // CUSTOMIZE: Your LinkedIn URL
     }
   },
+  // CUSTOMIZE: Replace with your own work experience (reverse chronological)
+  // Each entry: company name, location, title (null = dynamic from input), dates
   experience: [
     {
-      company: "Kavalier Coaching",
-      location: "Chicago, IL",
-      title: null,  // DYNAMIC - provided in input JSON
-      dates: "Sep 2024 - Dec 2025"
+      company: "Company A",                      // CUSTOMIZE: Most recent employer
+      location: "City, ST",
+      title: null,  // DYNAMIC - provided in input JSON per job application
+      dates: "Jan 2023 - Present"
     },
     {
-      company: "Vicegerent Custom Clothing",
-      location: "Chicago, IL",
-      title: null,  // DYNAMIC - provided in input JSON
-      dates: "Jun 2022 - Sep 2024"
+      company: "Company B",                      // CUSTOMIZE: Previous employer
+      location: "City, ST",
+      title: null,  // DYNAMIC - provided in input JSON per job application
+      dates: "Jun 2021 - Dec 2022"
     },
     {
-      company: "Oliver Wyman",
-      location: "Chicago, IL",
-      title: "Senior Consultant",  // LOCKED
-      dates: "Mar 2022 - Jun 2022"
+      company: "Consulting Firm",                // CUSTOMIZE: Earlier employer
+      location: "City, ST",
+      title: "Senior Consultant",  // LOCKED - set title here if not dynamic
+      dates: "Mar 2020 - Jun 2021"
     },
     {
-      company: "Deloitte Consulting LLP",
-      location: "Chicago, IL",
-      title: "Business Technology Analyst",  // LOCKED
-      dates: "Oct 2020 - Mar 2022"
+      company: "Enterprise Corp",                // CUSTOMIZE: Earlier employer
+      location: "City, ST",
+      title: "Business Analyst",   // LOCKED - set title here if not dynamic
+      dates: "Oct 2018 - Mar 2020"
     }
   ],
-  education: "Northwestern University | B.S. Computer Science | 2017 - 2020"
+  education: "University Name | B.S. Your Major | Year - Year"  // CUSTOMIZE
 };
 
 // ─────────────────────────────────────────────────────────
 // 0.5. MERGE INPUT WITH LOCKED DATA
 // ─────────────────────────────────────────────────────────
-// Input JSON provides: professional_title, summary, skills, bullets[], titles (for Kavalier/Vicegerent)
+// Input JSON provides: professional_title, summary, skills, bullets[], titles (for dynamic-title jobs)
 // Locked data provides: header, experience (company/location/dates), education
-// Titles: Kavalier & Vicegerent = DYNAMIC, Oliver Wyman & Deloitte = LOCKED
+// Titles: Jobs 1 & 2 = DYNAMIC (from input), Jobs 3 & 4 = LOCKED (from LOCKED_RESUME_DATA)
 
 function mergeWithLockedData(input) {
   // Validate bullets array
@@ -70,17 +73,17 @@ function mergeWithLockedData(input) {
   }
 
   // Validate titles for dynamic positions
-  if (!input.titles || !input.titles.kavalier || !input.titles.vicegerent) {
-    throw new Error('Input must include titles.kavalier and titles.vicegerent (these are dynamic per job posting)');
+  if (!input.titles || !input.titles.job1 || !input.titles.job2) {
+    throw new Error('Input must include titles.job1 and titles.job2 (these are dynamic per job posting)');
   }
 
   // Merge experience: locked fields + input bullets + dynamic titles
   const experience = LOCKED_RESUME_DATA.experience.map((job, idx) => {
     let title = job.title;  // Use locked title if set
 
-    // Dynamic titles for Kavalier (idx 0) and Vicegerent (idx 1)
-    if (idx === 0) title = input.titles.kavalier;
-    if (idx === 1) title = input.titles.vicegerent;
+    // Dynamic titles for Job 1 (idx 0) and Job 2 (idx 1)
+    if (idx === 0) title = input.titles.job1;
+    if (idx === 1) title = input.titles.job2;
 
     return {
       ...job,
@@ -307,19 +310,19 @@ if (require.main === module) {
           summary: "Professional summary...",
           skills: { "Category": ["Skill1", "Skill2"] },
           titles: {
-            kavalier: "Founder & Operator",
-            vicegerent: "Business Operations Analyst"
+            job1: "Your Title at Job 1",
+            job2: "Your Title at Job 2"
           },
           bullets: [
-            ["Kavalier bullet 1", "Kavalier bullet 2"],
-            ["Vicegerent bullet 1", "Vicegerent bullet 2"],
-            ["Oliver Wyman bullet 1", "Oliver Wyman bullet 2"],
-            ["Deloitte bullet 1", "Deloitte bullet 2"]
+            ["Company A bullet 1", "Company A bullet 2"],
+            ["Company B bullet 1", "Company B bullet 2"],
+            ["Consulting Firm bullet 1", "Consulting Firm bullet 2"],
+            ["Enterprise Corp bullet 1", "Enterprise Corp bullet 2"]
           ]
         }, null, 2));
         console.error('');
-        console.error('LOCKED: Company names, locations, dates, Oliver Wyman title, Deloitte title');
-        console.error('DYNAMIC: professional_title, summary, skills, bullets, Kavalier title, Vicegerent title');
+        console.error('LOCKED: Company names, locations, dates, Job 3 title, Job 4 title');
+        console.error('DYNAMIC: professional_title, summary, skills, bullets, Job 1 title, Job 2 title');
         process.exit(1);
       }
 

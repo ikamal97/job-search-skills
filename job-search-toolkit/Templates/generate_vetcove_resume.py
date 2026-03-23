@@ -3,7 +3,7 @@
 Generate tailored resume for Vetcove - SaaS Implementation Manager.
 
 Following ResumeTailoring.md workflow requirements:
-- Minimum 2 bullets per job (especially Oliver Wyman)
+- Minimum 2 bullets per job (especially Consulting Firm)
 - Keyword optimization for SaaS Implementation
 - ATS-friendly formatting
 """
@@ -12,7 +12,7 @@ import os
 import sys
 
 # Set up PYTHONPATH
-DOCX_SKILL_ROOT = "/Users/idreeskamal/.claude/plugins/cache/anthropic-agent-skills/example-skills/69c0b1a06741/skills/docx"
+DOCX_SKILL_ROOT = "os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'lib', 'docx')"
 TEMPLATES_DIR = os.path.dirname(os.path.abspath(__file__))
 
 sys.path.insert(0, DOCX_SKILL_ROOT)
@@ -30,12 +30,12 @@ def main():
 
     vetcove_data = {
         "header": {
-            "name": "IDREES KAMAL",
+            "name": "YOUR NAME",
             "contact": {
                 "location": "Chicago, IL",
-                "phone": "(773) 789-0400",
-                "email": "ikamal97@gmail.com",
-                "linkedin": "linkedin.com/in/idreeskamal"
+                "phone": "(555) 123-4567",
+                "email": "user@example.com",
+                "linkedin": "linkedin.com/in/yourprofile"
             }
         },
         "professional_title": "SAAS IMPLEMENTATION MANAGER",
@@ -84,7 +84,7 @@ def main():
         },
         "experience": [
             {
-                "company": "KAVALIER",
+                "company": "COMPANY_A",
                 "location": "Chicago, IL",
                 "title": "Business Systems Analyst",
                 "dates": "Sep 2024 to Dec 2025",
@@ -95,7 +95,7 @@ def main():
                 ]
             },
             {
-                "company": "VICEGERENT CUSTOM CLOTHIERS",
+                "company": "COMPANY_B",
                 "location": "Chicago, IL",
                 "title": "Business Operations Analyst",
                 "dates": "Jun 2022 to Sep 2024",
@@ -105,7 +105,7 @@ def main():
                 ]
             },
             {
-                "company": "OLIVER WYMAN",
+                "company": "CONSULTING_FIRM",
                 "location": "Chicago, IL",
                 "title": "Senior Consultant",
                 "dates": "Mar 2022 to Jun 2022",
@@ -115,7 +115,7 @@ def main():
                 ]
             },
             {
-                "company": "DELOITTE CONSULTING LLP",
+                "company": "ENTERPRISE_CORP",
                 "location": "Chicago, IL",
                 "title": "Business Analyst",
                 "dates": "Oct 2020 to Mar 2022",
@@ -125,7 +125,7 @@ def main():
                 ]
             }
         ],
-        "education": "Northwestern University | B.S. Computer Science | Sep 2017 to Jun 2020"
+        "education": "University Name | B.S. Your Major | Sep YYYY to Jun YYYY"
     }
 
     try:
@@ -136,16 +136,16 @@ def main():
         output_path = generate_resume_from_template(
             tailored_data=vetcove_data,
             company_name="Vetcove",
-            output_dir="/Users/idreeskamal/Documents/Obsidian Vault/04 - Career/Generated Assets/Vetcove"
+            output_dir="~/Career/Generated Assets/Vetcove"
         )
 
         print(f"\n✓ Resume generated successfully")
         print(f"✓ Output: {output_path}")
         print("\nBullet Count Verification:")
-        print("- Kavalier: 3 bullets ✓")
-        print("- Vicegerent: 2 bullets ✓")
-        print("- Oliver Wyman: 2 bullets ✓ (MEETS MINIMUM)")
-        print("- Deloitte: 2 bullets ✓")
+        print("- Company A: 3 bullets ✓")
+        print("- Company B: 2 bullets ✓")
+        print("- Consulting Firm: 2 bullets ✓ (MEETS MINIMUM)")
+        print("- Enterprise Corp: 2 bullets ✓")
 
     except Exception as e:
         print(f"\n✗ Error generating resume: {e}")

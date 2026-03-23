@@ -13,7 +13,7 @@ import os
 import sys
 
 # Set up PYTHONPATH for Document library and TemplateProcessor
-DOCX_SKILL_ROOT = "/Users/idreeskamal/.claude/plugins/cache/anthropic-agent-skills/example-skills/69c0b1a06741/skills/docx"
+DOCX_SKILL_ROOT = "os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'lib', 'docx')"
 TEMPLATES_DIR = os.path.dirname(os.path.abspath(__file__))
 
 sys.path.insert(0, DOCX_SKILL_ROOT)
@@ -29,12 +29,12 @@ def main():
     # Sample tailored resume data (replace with actual data from ResumeTailoring workflow)
     sample_data = {
         "header": {
-            "name": "IDREES KAMAL",
+            "name": "YOUR NAME",
             "contact": {
                 "location": "Chicago, IL",
-                "phone": "(773) 789-0400",
-                "email": "ikamal97@gmail.com",
-                "linkedin": "linkedin.com/in/idreeskamal"
+                "phone": "(555) 123-4567",
+                "email": "user@example.com",
+                "linkedin": "linkedin.com/in/yourprofile"
             }
         },
         "professional_title": "SENIOR BUSINESS SYSTEMS ANALYST",
@@ -48,7 +48,7 @@ def main():
         },
         "experience": [
             {
-                "company": "KAVALIER",
+                "company": "COMPANY_A",
                 "location": "Chicago, IL",
                 "title": "Business Systems Analyst",
                 "dates": "Sep 2024 to Present",
@@ -59,7 +59,7 @@ def main():
                 ]
             },
             {
-                "company": "VICEGERENT CUSTOM CLOTHIERS",
+                "company": "COMPANY_B",
                 "location": "Chicago, IL",
                 "title": "Business Operations Analyst",
                 "dates": "Jun 2022 to Sep 2024",
@@ -70,7 +70,7 @@ def main():
                 ]
             },
             {
-                "company": "OLIVER WYMAN",
+                "company": "CONSULTING_FIRM",
                 "location": "Chicago, IL",
                 "title": "Senior Consultant",
                 "dates": "Mar 2022 to Jun 2022",
@@ -80,7 +80,7 @@ def main():
                 ]
             },
             {
-                "company": "DELOITTE CONSULTING LLP",
+                "company": "ENTERPRISE_CORP",
                 "location": "Chicago, IL",
                 "title": "Business Analyst",
                 "dates": "Oct 2020 to Mar 2022",
@@ -92,7 +92,7 @@ def main():
                 ]
             }
         ],
-        "education": "Northwestern University | B.S. Computer Science | Sep 2017 to Jun 2020"
+        "education": "University Name | B.S. Your Major | Sep YYYY to Jun YYYY"
     }
 
     try:
@@ -131,9 +131,9 @@ def main():
         print(f"ERROR: {e}")
         print()
         print("Make sure template file exists at:")
-        print("  /Users/idreeskamal/Downloads/Idrees_Kamal_BSA_Resume_01.02.26.docx")
+        print("  ~/Downloads/Your_Name_Resume.docx")
         print("  OR")
-        print("  /Users/idreeskamal/Documents/Obsidian Vault/04 - Personal Operating System/Career/")
+        print("  ~/Career/CONTEXT/")
         return 1
 
     except Exception as e:

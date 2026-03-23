@@ -102,7 +102,7 @@ For each verified job, invoke JobDescriptionParser to extract:
 
 **Step 2.2: Calculate Fit Scores**
 
-**MANDATORY:** Read user profile from `04 - Career/CONTEXT/`:
+**MANDATORY:** Read user profile from `~/Career/CONTEXT/`:
 - Professional Background - Index.md (always first)
 - Experience Details.md (for experience verification)
 - Technical Skills.md (for skills matching)
@@ -155,7 +155,7 @@ Invoke ResumeTailoring workflow:
 - Update professional summary for role fit
 - Target: 75-85% keyword match
 
-**Output:** `~/Downloads/BespokeApplications_YYYYMMDD_HHMMSS/XX_Company_Role/Idrees_Kamal_Resume_Company.docx`
+**Output:** `~/Downloads/BespokeApplications_YYYYMMDD_HHMMSS/XX_Company_Role/Your_Name_Resume_Company.docx`
 
 **Step 3.2: Generate Cover Letter**
 
@@ -166,7 +166,7 @@ Invoke CoverLetterGenerator workflow:
 - Include measurable achievements
 - Target: ATS score 85+/100
 
-**Output:** `~/Downloads/BespokeApplications_YYYYMMDD_HHMMSS/XX_Company_Role/Idrees_Kamal_CoverLetter_Company.docx`
+**Output:** `~/Downloads/BespokeApplications_YYYYMMDD_HHMMSS/XX_Company_Role/Your_Name_CoverLetter_Company.docx`
 
 **Step 3.3: Format Hiring Manager Outreach**
 
@@ -205,8 +205,8 @@ Create JSON with complete job information:
     "email": "john.smith@velera.com"
   },
   "materials_generated": {
-    "resume": "Idrees_Kamal_Resume_Velera.docx",
-    "cover_letter": "Idrees_Kamal_CoverLetter_Velera.docx",
+    "resume": "Your_Name_Resume_Velera.docx",
+    "cover_letter": "Your_Name_CoverLetter_Velera.docx",
     "outreach": "hiring_manager_outreach.md"
   },
   "keyword_match": {
@@ -243,20 +243,20 @@ Folders are numbered by fit score rank:
 ├── all_verified_jobs.json
 │
 ├── 01_Velera_BSA_III/
-│   ├── Idrees_Kamal_Resume_Velera.docx
-│   ├── Idrees_Kamal_CoverLetter_Velera.docx
+│   ├── Your_Name_Resume_Velera.docx
+│   ├── Your_Name_CoverLetter_Velera.docx
 │   ├── hiring_manager_outreach.md
 │   └── job_metadata.json
 │
 ├── 02_Absorb_Software_Sales_Ops_Analyst/
-│   ├── Idrees_Kamal_Resume_Absorb_Software.docx
-│   ├── Idrees_Kamal_CoverLetter_Absorb_Software.docx
+│   ├── Your_Name_Resume_Absorb_Software.docx
+│   ├── Your_Name_CoverLetter_Absorb_Software.docx
 │   ├── hiring_manager_outreach.md
 │   └── job_metadata.json
 │
 └── 03_HubSpot_Operations_Analyst/
-    ├── Idrees_Kamal_Resume_HubSpot.docx
-    ├── Idrees_Kamal_CoverLetter_HubSpot.docx
+    ├── Your_Name_Resume_HubSpot.docx
+    ├── Your_Name_CoverLetter_HubSpot.docx
     ├── hiring_manager_outreach.md
     └── job_metadata.json
 ```
@@ -378,7 +378,7 @@ User: "Search LinkedIn and Built In for Implementation Manager roles and prepare
 - `CoverLetterGenerator.md` - Cover letter generation
 
 **Required Files:**
-- `04 - Career/CONTEXT/` folder - Career context files (Index, Experience Details, Technical Skills, Honest Gaps)
+- `~/Career/CONTEXT/` folder - Career context files (Index, Experience Details, Technical Skills, Honest Gaps)
 - Template DOCX in Downloads or Career folder
 
 ---

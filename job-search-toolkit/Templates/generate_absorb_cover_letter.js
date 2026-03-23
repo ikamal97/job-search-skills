@@ -20,12 +20,12 @@ const doc = new Document({
       new Paragraph({
         alignment: AlignmentType.LEFT,
         spacing: { after: 0 },
-        children: [new TextRun({ text: "IDREES KAMAL", bold: true, size: 24 })]
+        children: [new TextRun({ text: "YOUR NAME", bold: true, size: 24 })]
       }),
       new Paragraph({
         alignment: AlignmentType.LEFT,
         spacing: { after: 0 },
-        children: [new TextRun({ text: "Chicago, IL | (773) 789-0400 | ikamal97@gmail.com | linkedin.com/in/idreeskamal", size: 20 })]
+        children: [new TextRun({ text: "Chicago, IL | (555) 123-4567 | user@example.com | linkedin.com/in/yourprofile", size: 20 })]
       }),
       new Paragraph({
         spacing: { after: 240 },
@@ -72,7 +72,7 @@ const doc = new Document({
         spacing: { after: 240 },
         alignment: AlignmentType.JUSTIFIED,
         children: [new TextRun({
-          text: "The \"crunchy\" work you described—pipeline reporting, data analysis, and building reliable dashboards—is where I thrive. At Deloitte, I built executive dashboards and financial models that translated complex datasets into actionable insights for leadership, supporting strategic decisions across digital transformation initiatives. At Oliver Wyman, I developed predictive retention models in Python that identified at-risk customer segments and quantified revenue impact, supporting initiatives projected to reduce churn by 23%. I'm highly proficient in Excel (pivot tables, VLOOKUP, advanced formulas) and SQL for data analysis, and I learn new systems quickly—my Computer Science degree from Northwestern gives me the technical foundation to work efficiently across any tech stack."
+          text: "The \"crunchy\" work you described—pipeline reporting, data analysis, and building reliable dashboards—is where I thrive. At a Big 4 firm, I built executive dashboards and financial models that translated complex datasets into actionable insights for leadership, supporting strategic decisions across digital transformation initiatives. At a consulting firm, I developed predictive retention models in Python that identified at-risk customer segments and quantified revenue impact, supporting initiatives projected to reduce churn by 23%. I'm highly proficient in Excel (pivot tables, VLOOKUP, advanced formulas) and SQL for data analysis, and I learn new systems quickly—my Computer Science degree gives me the technical foundation to work efficiently across any tech stack."
         })]
       }),
 
@@ -81,7 +81,7 @@ const doc = new Document({
         spacing: { after: 240 },
         alignment: AlignmentType.JUSTIFIED,
         children: [new TextRun({
-          text: "My operational experience directly mirrors what you need for pipeline management and data hygiene. At Vicegerent Custom Clothiers, I implemented a CRM system and migrated 700+ client records from spreadsheets, establishing lifecycle stages and standardized fields to centralize customer and order tracking. I cleaned and normalized legacy data using Python scripts and governance rules, then owned ongoing data quality to ensure consistent team entry. At Kavalier, I built end-to-end onboarding workflows across CRM and payment platforms, performed rigorous testing on automations, and reduced onboarding effort from 3-5 hours to 1-2 hours per client. While my CRM experience has been with GoHighLevel and Notion rather than Salesforce specifically, the fundamentals are identical: lead routing, account hygiene, data validation, and building reports that drive decisions."
+          text: "My operational experience directly mirrors what you need for pipeline management and data hygiene. At Company B, I implemented a CRM system and migrated 700+ client records from spreadsheets, establishing lifecycle stages and standardized fields to centralize customer and order tracking. I cleaned and normalized legacy data using Python scripts and governance rules, then owned ongoing data quality to ensure consistent team entry. At Company A, I built end-to-end onboarding workflows across CRM and payment platforms, performed rigorous testing on automations, and reduced onboarding effort from 3-5 hours to 1-2 hours per client. While my CRM experience has been with GoHighLevel and Notion rather than Salesforce specifically, the fundamentals are identical: lead routing, account hygiene, data validation, and building reports that drive decisions."
         })]
       }),
 
@@ -110,13 +110,13 @@ const doc = new Document({
       }),
       new Paragraph({
         spacing: { after: 0 },
-        children: [new TextRun({ text: "Idrees Kamal" })]
+        children: [new TextRun({ text: "Your Name" })]
       })
     ]
   }]
 });
 
 Packer.toBuffer(doc).then(buffer => {
-  fs.writeFileSync("/Users/idreeskamal/Downloads/Idrees_Kamal_CoverLetter_Absorb_Software.docx", buffer);
-  console.log("Cover letter created: /Users/idreeskamal/Downloads/Idrees_Kamal_CoverLetter_Absorb_Software.docx");
+  fs.writeFileSync("~/Downloads/Your_Name_CoverLetter_Absorb_Software.docx", buffer);
+  console.log("Cover letter created: ~/Downloads/Your_Name_CoverLetter_Absorb_Software.docx");
 });

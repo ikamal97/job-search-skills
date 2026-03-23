@@ -10,7 +10,7 @@ A ruthless hiring manager simulation that critiques resumes and outputs revised 
 
 ## Requirements
 
-- **Target user:** Idrees only (leverages Master Context)
+- **Target user:** Single user (leverages Career Context files)
 - **Modes:** General (default) or Job-specific (if JD provided)
 - **Critique style:** Ruthless, no sugarcoating, 30-second scan simulation
 - **Output:** Concise feedback (~200 words) + revised .docx to ~/Downloads/
@@ -61,13 +61,13 @@ A ruthless hiring manager simulation that critiques resumes and outputs revised 
 - Missing keywords: [list]
 - Fit score: X/10
 
-📄 Revised resume: ~/Downloads/Idrees_Kamal_Resume.docx
+📄 Revised resume: ~/Downloads/Your_Name_Resume.docx
 ```
 
 ### DOCX Output
 
-- **General:** `Idrees_Kamal_Resume.docx`
-- **Job-specific:** `Idrees_Kamal_Resume_[Company].docx`
+- **General:** `Your_Name_Resume.docx`
+- **Job-specific:** `Your_Name_Resume_[Company].docx`
 - Uses existing resume-spec.yaml formatting
 - One-page enforcement from existing infrastructure
 
@@ -89,7 +89,7 @@ A ruthless hiring manager simulation that critiques resumes and outputs revised 
 
 Searches for most recent .docx with "resume" in filename:
 1. `~/Downloads/`
-2. `04 - Career/`
+2. `~/Career/`
 
 ## Integration
 

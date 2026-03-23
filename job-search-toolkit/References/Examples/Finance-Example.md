@@ -28,8 +28,8 @@
 
 ## Cover Letter
 
-**Idrees Kamal**
-(555) 123-4567 | idrees.kamal@email.com | linkedin.com/in/idreeskamal | Seattle, WA
+**Your Name**
+(555) 123-4567 | user@example.com | linkedin.com/in/yourprofile | Seattle, WA
 
 January 7, 2026
 
@@ -50,7 +50,7 @@ I am particularly drawn to Wells Fargo's focus on rebuilding customer trust thro
 I would welcome the opportunity to discuss how my financial services expertise and commitment to compliance can support Wells Fargo's goals. Thank you for your consideration.
 
 Sincerely,
-Idrees Kamal
+Your Name
 
 ---
 
@@ -131,7 +131,7 @@ Total: 20 points
 
 ### 4. File Compliance (10 points)
 ```
-✓ File naming: Idrees_Kamal_CoverLetter_WellsFargo.docx = 5 points
+✓ File naming: Your_Name_CoverLetter_WellsFargo.docx = 5 points
 ✓ File format: .docx = 5 points
 
 Score: 10 points

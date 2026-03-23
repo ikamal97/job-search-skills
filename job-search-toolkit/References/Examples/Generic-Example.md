@@ -38,8 +38,8 @@ This generic template is for situations where:
 
 ## Cover Letter
 
-**Idrees Kamal**
-(555) 123-4567 | idrees.kamal@email.com | linkedin.com/in/idreeskamal | Seattle, WA
+**Your Name**
+(555) 123-4567 | user@example.com | linkedin.com/in/yourprofile | Seattle, WA
 
 January 7, 2026
 
@@ -60,7 +60,7 @@ I am particularly drawn to TechCorp's innovative approach and commitment to oper
 I would welcome the opportunity to discuss how my analytical expertise and problem-solving skills can contribute to TechCorp's success. Thank you for your consideration. I look forward to speaking with you.
 
 Sincerely,
-Idrees Kamal
+Your Name
 
 ---
 
@@ -138,7 +138,7 @@ Total: 20 points
 
 ### 4. File Compliance (10 points)
 ```
-✓ File naming: Idrees_Kamal_CoverLetter_TechCorp.docx = 5 points
+✓ File naming: Your_Name_CoverLetter_TechCorp.docx = 5 points
 ✓ File format: .docx = 5 points
 
 Score: 10 points

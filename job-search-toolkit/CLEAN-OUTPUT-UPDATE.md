@@ -30,8 +30,8 @@
 
 ### After (Clean)
 ```markdown
-Idrees Kamal
-(773) 789-0400 | ikamal97@gmail.com | linkedin.com/in/idreeskamal | Chicago, IL
+Your Name
+(555) 123-4567 | user@example.com | linkedin.com/in/yourprofile | Chicago, IL
 
 January 7, 2026
 
@@ -44,7 +44,7 @@ Dear Hiring Manager,
 [Cover letter text - paragraphs only]
 
 Sincerely,
-Idrees Kamal
+Your Name
 ```
 
 ✅ Result: Ready to use immediately - just convert to DOCX or copy/paste
@@ -80,9 +80,9 @@ ATS Analysis:
 - Missing Keywords: Guiding Care, Facets (CareFirst-specific)
 
 Files Created:
-- Idrees_Kamal_CoverLetter_CareFirst.md (CLEAN)
-- Idrees_Kamal_CoverLetter_CareFirst.docx
-- Idrees_Kamal_CoverLetter_CareFirst.pdf
+- Your_Name_CoverLetter_CareFirst.md (CLEAN)
+- Your_Name_CoverLetter_CareFirst.docx
+- Your_Name_CoverLetter_CareFirst.pdf
 
 ✓ Ready for submission
 ```
@@ -130,13 +130,13 @@ Saves ~2 minutes per cover letter!
 3. `CoverLetterGenerator.md` - Updated Usage Examples
 
 **Regenerated:**
-4. `Career/Idrees_Kamal_CoverLetter_CareFirst.md` - Now clean format
+4. `Career/Your_Name_CoverLetter_CareFirst.md` - Now clean format
 
 ---
 
 ## Your CareFirst Cover Letter
 
-**Location:** `/Users/idreeskamal/Documents/Obsidian Vault/04 - Personal Operating System/Career/Idrees_Kamal_CoverLetter_CareFirst.md`
+**Location:** `~/Career/CONTEXT/Your_Name_CoverLetter_CareFirst.md`
 
 **Content:** ✅ Clean cover letter only (398 words, 6 paragraphs)
 
@@ -144,7 +144,7 @@ Saves ~2 minutes per cover letter!
 
 **To Submit:**
 1. Open in Word or Pages
-2. Save as: `Idrees_Kamal_CoverLetter_CareFirst.docx`
+2. Save as: `Your_Name_CoverLetter_CareFirst.docx`
 3. Upload to Jobvite portal
 
 ---

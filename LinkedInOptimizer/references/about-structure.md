@@ -36,7 +36,7 @@
 | **Surprising Stat** | "In 2024, I automated 70% of my company's manual processes." |
 | **Question** | "What if your ops team could do 3x the work without hiring?" |
 | **Contrarian Take** | "Most AI projects fail. Mine don't. Here's why." |
-| **Story Opener** | "Two years ago, I left Deloitte to build something different." |
+| **Story Opener** | "Two years ago, I left [Previous Employer] to build something different." |
 
 **Bad Hooks (Avoid):**
 - "I am a passionate professional who..."
@@ -82,7 +82,7 @@ My expertise spans:
 • Operations Design: Building workflows that scale from 10 to 10,000 users
 • AI Implementation: Turning complex AI capabilities into practical tools
 • Process Automation: Identifying and eliminating manual work systematically
-• Consulting Background: Deloitte-trained problem solving meets startup speed
+• Consulting Background: [Consulting Firm]-trained problem solving meets startup speed
 ```
 
 ### Part 4: Proof (3-5 bullets with metrics, ~500 chars)
@@ -152,9 +152,11 @@ What I've delivered:
 ## Example: Full About Section
 
 ```
+<!-- CUSTOMIZE: Replace the bracketed placeholders with your own details. -->
+
 I help companies automate what shouldn't be manual.
 
-After watching operations teams at Deloitte and Oliver Wyman drown in
+After watching operations teams at [Consulting Firm] and [Previous Employer] drown in
 spreadsheets and manual processes, I became obsessed with a question:
 why do smart people spend their days on work that machines could do better?
 
@@ -163,22 +165,22 @@ demos—real systems that handle real operations at scale.
 
 What I bring:
 
-• Consulting rigor: Deloitte-trained problem solving applied to automation
+• Consulting rigor: [Consulting Firm]-trained problem solving applied to automation
 • Technical depth: I build the AI systems myself, not just spec them out
 • Operations mindset: I've run a business—I know what actually matters
 • Speed: Startup velocity meets enterprise quality
 
 What I've delivered:
 
-• Automated 70% of manual operations at Kavalier, enabling 3x growth
-• Built AI lookbook generator saving 15+ hours per photoshoot
+• Automated 70% of manual operations at [Company], enabling 3x growth
+• Built AI-powered [tool/product] saving 15+ hours per [process]
 • Reduced client onboarding from 2 weeks to 2 days
-• Designed measurement system handling 500+ records with zero errors
+• Designed [system] handling 500+ records with zero errors
 
-I'm currently exploring AI implementation roles where I can bring this
+I'm currently exploring [target role] roles where I can bring this
 combination of consulting, technical, and operational experience.
 
-Let's connect: idrees@kavalier.co
+Let's connect: [your-email@domain.com]
 ```
 
 **Character count:** ~1,850 (within optimal range)
@@ -194,7 +196,7 @@ Let's connect: idrees@kavalier.co
 - Bullet points for lists
 
 ### Don't Use:
-- Third person ("Idrees is a...")
+- Third person ("[Your Name] is a...")
 - Passive voice
 - Vague claims without evidence
 - Wall-of-text paragraphs

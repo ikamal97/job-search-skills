@@ -28,8 +28,8 @@
 
 ## Cover Letter
 
-**Idrees Kamal**
-(555) 123-4567 | idrees.kamal@email.com | linkedin.com/in/idreeskamal | Seattle, WA
+**Your Name**
+(555) 123-4567 | user@example.com | linkedin.com/in/yourprofile | Seattle, WA
 
 January 7, 2026
 
@@ -50,7 +50,7 @@ I am particularly drawn to Kaiser Permanente's commitment to integrated care and
 I would welcome the opportunity to discuss how my healthcare IT experience can support Kaiser's patient care goals. Thank you for your consideration. I look forward to contributing to your mission of total health for all.
 
 Sincerely,
-Idrees Kamal
+Your Name
 
 ---
 
@@ -133,7 +133,7 @@ Total: 15 points
 
 ### 4. File Compliance (10 points)
 ```
-✓ File naming: Idrees_Kamal_CoverLetter_KaiserPermanente.docx = 5 points
+✓ File naming: Your_Name_CoverLetter_KaiserPermanente.docx = 5 points
 ✓ File format: .docx = 5 points
 
 Score: 10 points

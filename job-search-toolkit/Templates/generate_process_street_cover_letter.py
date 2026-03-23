@@ -46,13 +46,13 @@ def generate_cover_letter():
     # Body 1
     doc.add_paragraph()
     doc.add_paragraph(
-        "At Kavalier, I built end-to-end workflow automations using no-code platforms (GoHighLevel, Zapier) "
+        "At Company A, I built end-to-end workflow automations using no-code platforms (GoHighLevel, Zapier) "
         "and API integrations, connecting CRM, payment processing, and scheduling systems to automate client "
         "onboarding workflows. I also developed a full-stack TypeScript/React application integrating the "
         "Google Gemini API, demonstrating my ability to understand technical requirements and translate them "
-        "into working solutions. My Deloitte consulting background taught me to conduct technical discovery "
+        "into working solutions. My Enterprise Corp consulting background taught me to conduct technical discovery "
         "sessions with stakeholders, gather requirements, and present solutions that align business needs with "
-        "technical capabilities. At Vicegerent, I served 36 clients directly, managing consultative sales "
+        "technical capabilities. At Company B, I served 36 clients directly, managing consultative sales "
         "conversations and delivering customized solutions—experience that translates directly to pre-sales "
         "demos and technical discovery calls."
     )
@@ -79,12 +79,12 @@ def generate_cover_letter():
     # Signature
     doc.add_paragraph()
     doc.add_paragraph("Sincerely,")
-    doc.add_paragraph("Idrees Kamal")
+    doc.add_paragraph("Your Name")
 
     # Save
-    output_dir = "/Users/idreeskamal/Documents/Obsidian Vault/04 - Career/Generated Assets/Process Street"
+    output_dir = "~/Career/Generated Assets/Process Street"
     os.makedirs(output_dir, exist_ok=True)
-    output_path = os.path.join(output_dir, "Idrees_Kamal_CoverLetter_Process_Street.docx")
+    output_path = os.path.join(output_dir, "Your_Name_CoverLetter_Process_Street.docx")
     doc.save(output_path)
 
     word_count = sum(len(p.text.split()) for p in doc.paragraphs)

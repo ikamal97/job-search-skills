@@ -21,8 +21,8 @@ const doc = new Document({
         alignment: AlignmentType.CENTER,
         spacing: { after: 120 },
         children: [
-          new TextRun({ text: "IDREES KAMAL", bold: true, size: 28 }),
-          new TextRun({ text: "\nChicago, IL | (773) 789-0400 | ikamal97@gmail.com | linkedin.com/in/idreeskamal", size: 20 })
+          new TextRun({ text: "YOUR NAME", bold: true, size: 28 }),
+          new TextRun({ text: "\nChicago, IL | (555) 123-4567 | user@example.com | linkedin.com/in/yourprofile", size: 20 })
         ]
       }),
 
@@ -59,7 +59,7 @@ const doc = new Document({
 
       new Paragraph({
         spacing: { after: 60 },
-        children: [new TextRun({ text: "Business Systems Analyst | Kavalier | Chicago, IL | Sep 2024 to Present", bold: true })]
+        children: [new TextRun({ text: "Business Systems Analyst | Company A | Chicago, IL | Sep 2024 to Present", bold: true })]
       }),
       new Paragraph({
         spacing: { after: 60 },
@@ -70,7 +70,7 @@ const doc = new Document({
 
       new Paragraph({
         spacing: { after: 60 },
-        children: [new TextRun({ text: "Business Operations Analyst | Vicegerent Custom Clothiers | Chicago, IL | Jun 2022 to Sep 2024", bold: true })]
+        children: [new TextRun({ text: "Business Operations Analyst | Company B | Chicago, IL | Jun 2022 to Sep 2024", bold: true })]
       }),
       new Paragraph({
         spacing: { after: 60 },
@@ -81,7 +81,7 @@ const doc = new Document({
 
       new Paragraph({
         spacing: { after: 60 },
-        children: [new TextRun({ text: "Senior Consultant | Oliver Wyman | Chicago, IL | Mar 2022 to Jun 2022", bold: true })]
+        children: [new TextRun({ text: "Senior Consultant | Consulting Firm | Chicago, IL | Mar 2022 to Jun 2022", bold: true })]
       }),
       new Paragraph({
         spacing: { after: 60 },
@@ -92,7 +92,7 @@ const doc = new Document({
 
       new Paragraph({
         spacing: { after: 60 },
-        children: [new TextRun({ text: "Business Analyst | Deloitte Consulting LLP | Chicago, IL | Oct 2020 to Mar 2022", bold: true })]
+        children: [new TextRun({ text: "Business Analyst | Enterprise Corp | Chicago, IL | Oct 2020 to Mar 2022", bold: true })]
       }),
       new Paragraph({
         spacing: { after: 120 },
@@ -107,14 +107,14 @@ const doc = new Document({
         children: [new TextRun({ text: "EDUCATION", bold: true, size: 22 })]
       }),
       new Paragraph({
-        children: [new TextRun({ text: "Northwestern University | B.S. Computer Science | Sep 2017 to Jun 2020" })]
+        children: [new TextRun({ text: "University Name | B.S. Your Major | Sep YYYY to Jun YYYY" })]
       })
     ]
   }]
 });
 
 Packer.toBuffer(doc).then(buffer => {
-  const outputPath = "/Users/idreeskamal/Downloads/Idrees_Kamal_Resume_Absorb_Software_v2.docx";
+  const outputPath = "~/Downloads/Your_Name_Resume_Absorb_Software_v2.docx";
   fs.writeFileSync(outputPath, buffer);
   console.log("✓ Clean resume created: " + outputPath);
 });

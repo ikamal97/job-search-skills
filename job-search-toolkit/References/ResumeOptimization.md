@@ -116,8 +116,8 @@
 
 **Example:**
 ```
-IDREES KAMAL
-(773) 789-0400 | ikamal97@gmail.com | linkedin.com/in/idreeskamal | Chicago, IL
+YOUR NAME
+(555) 123-4567 | user@example.com | linkedin.com/in/yourprofile | Chicago, IL
 ```
 
 **DON'T include:**
@@ -215,7 +215,7 @@ Degree Name | University Name | Graduation Month Year
 
 **Example:**
 ```
-B.S. Computer Science | Northwestern University | Jun 2020
+B.S. Your Major | University Name | Jun YYYY
 ```
 
 **Include:**

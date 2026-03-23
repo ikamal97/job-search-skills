@@ -1,15 +1,15 @@
 {
   "header": {
-    "name": "IDREES KAMAL",
+    "name": "YOUR NAME",
     "contact": {
       "location": "Chicago, IL",
-      "phone": "(773) 789-0400",
-      "email": "ikamal97@gmail.com",
-      "linkedin": "linkedin.com/in/idreeskamal"
+      "phone": "(555) 123-4567",
+      "email": "user@example.com",
+      "linkedin": "linkedin.com/in/yourprofile"
     }
   },
   "professional_title": "BUSINESS SYSTEMS ANALYST",
-  "summary": "Business Systems Analyst with Deloitte and Oliver Wyman background. Expert in CRM implementation, data migration, and workflow automation. Built end-to-end client onboarding systems reducing effort by 60%.",
+  "summary": "Business Systems Analyst with Big 4 and consulting firm background. Expert in CRM implementation, data migration, and workflow automation. Built end-to-end client onboarding systems reducing effort by 60%.",
   "skills": {
     "Implementation & Delivery": ["Client Onboarding", "Data Migration", "Requirements Gathering", "UAT"],
     "Technical Skills": ["SQL", "Python", "API Integrations", "Workflow Automation"],
@@ -17,7 +17,7 @@
   },
   "experience": [
     {
-      "company": "KAVALIER",
+      "company": "COMPANY_A",
       "location": "Chicago, IL",
       "title": "Business Systems Analyst",
       "dates": "Sep 2024 to Present",
@@ -27,7 +27,7 @@
       ]
     },
     {
-      "company": "OLIVER WYMAN",
+      "company": "CONSULTING_FIRM",
       "location": "Chicago, IL",
       "title": "Business Analyst",
       "dates": "Jan 2022 to Aug 2024",
@@ -37,7 +37,7 @@
       ]
     },
     {
-      "company": "DELOITTE",
+      "company": "ENTERPRISE_CORP",
       "location": "Chicago, IL",
       "title": "Analyst",
       "dates": "Jun 2020 to Dec 2021",
@@ -47,5 +47,5 @@
       ]
     }
   ],
-  "education": "Northwestern University | B.S. Computer Science | Sep 2017 to Jun 2020"
+  "education": "University Name | B.S. Your Major | Sep YYYY to Jun YYYY"
 }

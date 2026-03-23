@@ -51,7 +51,7 @@ Product Marketing Manager | SEO & Content Strategy | FinTech
 
 **Examples:**
 ```
-Ex-Deloitte Consultant | Northwestern CS | Automating Operations with 70%+ Efficiency Gains
+Ex-[Consulting Firm] Consultant | [University] CS | Automating Operations with 70%+ Efficiency Gains
 Reduced API Errors 30% | Software Engineer | Python, AWS, APIs
 Built $2M Pipeline | Sales Engineer | Enterprise SaaS Solutions
 ```
@@ -114,12 +114,12 @@ Example: AI Implementation Specialist | Automation & Operations | Building AI-Po
 # Pattern 2: Identity/Achievement Forward
 [Identity/Credential] | [Value Proposition] | [Open Signal]
 
-Example: Ex-Deloitte Consultant | Automating Operations with AI | Available for Contract & Full-Time
+Example: Ex-[Consulting Firm] Consultant | Automating Operations with AI | Available for Contract & Full-Time
 
 # Pattern 3: Value Statement Forward
 [What You Do] | [Who You Help] | [Result]
 
-Example: I Help Companies Automate Operations | 70%+ Efficiency Gains | Ex-Deloitte, Northwestern CS
+Example: I Help Companies Automate Operations | 70%+ Efficiency Gains | Ex-[Consulting Firm], [University] CS
 ```
 
 ### Entrepreneur / Founder
@@ -129,10 +129,10 @@ Example: I Help Companies Automate Operations | 70%+ Efficiency Gains | Ex-Deloi
 **Better Framing:**
 ```
 # Frame as operational experience, not title
-Built AI Systems for SMB Operations | Ex-Deloitte | Automation & Process Design
+Built AI Systems for SMB Operations | Ex-[Consulting Firm] | Automation & Process Design
 
 # Frame as consulting/advisory
-Operations Automation Consultant | Ex-Deloitte | Building Scalable Workflows for SMBs
+Operations Automation Consultant | Ex-[Consulting Firm] | Building Scalable Workflows for SMBs
 
 # Frame by what you do, not company
 I Automate Business Operations | AI & Workflow Design | 70%+ Manual Work Reduction
@@ -209,7 +209,7 @@ C: Turning Data into Decisions | ML & Analytics | Ex-McKinsey
 ```
 # Business Analyst
 A: Business Systems Analyst | SQL, Agile, Salesforce | Healthcare Tech
-B: Ex-Deloitte Consultant | Northwestern CS | Process Optimization Expert
+B: Ex-[Consulting Firm] Consultant | [University] CS | Process Optimization Expert
 C: Bridging Business & Technology | Systems Analysis | Making Complex Simple
 
 # Product Manager
@@ -224,7 +224,7 @@ C: I Build Products People Actually Use | User-Centered Design | Ex-Google
 # Operations
 A: AI Implementation Specialist | Automation & Operations | B2B SaaS
 B: Reduced Manual Work 70% | Operations Leader | AI & Workflow Automation
-C: I Automate What Shouldn't Be Manual | Operations Design | Ex-Deloitte
+C: I Automate What Shouldn't Be Manual | Operations Design | Ex-[Consulting Firm]
 
 # Strategy
 A: Strategy & Operations Manager | M&A, FP&A, Process Design | FinTech

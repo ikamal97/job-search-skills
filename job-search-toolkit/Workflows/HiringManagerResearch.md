@@ -91,7 +91,7 @@ Use common corporate email patterns based on hiring manager's name:
 **Personalization Elements:**
 - Reference specific job title (not generic "opening")
 - Include job posting URL in first paragraph (MANDATORY)
-- Mention relevant experience from candidate's resume (Deloitte, Oliver Wyman, Kavalier, etc.)
+- Mention relevant experience from candidate's resume (your previous employers)
 - Highlight 1-2 specific skills that match the role (e.g., BRDs/FRDs for BSA, RevOps for CRO)
 - Research company mission/recent news when possible
 - Tailor industry references (healthcare, fintech, SaaS, etc.)
@@ -112,7 +112,7 @@ Hi [First Name],
 
 Best regards,
 [Candidate Name]
-[Credential, e.g., B.S. Computer Science, Northwestern University]
+[Credential, e.g., B.S. Computer Science, University Name]
 ```
 
 **Example:**
@@ -121,14 +121,14 @@ Subject: Senior Revenue Operations Manager - RevOps + Analytics Background
 
 Hi Adam,
 
-I'm excited about the Senior Revenue Operations Manager role at Apollo.io (https://builtin.com/job/senior-customer-operations-manager/7091902). My background at Deloitte and Oliver Wyman includes building revenue operations frameworks, optimizing sales processes, and implementing CRM and analytics systems that drove predictable growth.
+I'm excited about the Senior Revenue Operations Manager role at Apollo.io (https://builtin.com/job/senior-customer-operations-manager/7091902). My background at a Big 4 firm and Consulting Firm includes building revenue operations frameworks, optimizing sales processes, and implementing CRM and analytics systems that drove predictable growth.
 
-I've designed territory models, built pipeline forecasting tools, and created dashboards that gave revenue leaders real-time visibility into performance. At Kavalier, I built end-to-end revenue operations from scratch, managing everything from lead routing to customer retention.
+I've designed territory models, built pipeline forecasting tools, and created dashboards that gave revenue leaders real-time visibility into performance. At Company A, I built end-to-end revenue operations from scratch, managing everything from lead routing to customer retention.
 
 I'd love to discuss how my RevOps expertise can support Apollo's hypergrowth. Could we schedule a call?
 
 Best,
-Idrees Kamal
+Your Name
 ```
 
 ---
@@ -216,19 +216,19 @@ Idrees Kamal
 
 **Draft Email:**
 ```
-Subject: Business Analyst Role - Deloitte BSA Background
+Subject: Business Analyst Role - Consulting Background
 
 Hi Jorge,
 
-I'm reaching out about the Business Analyst position at Cleo (https://www.builtinchicago.org/job/business-analyst/7933617). With my background as a Business Systems Analyst at Deloitte and Oliver Wyman, I've developed strong expertise in requirements gathering, process mapping, and cross-functional stakeholder management—skills that align perfectly with Cleo's mission to democratize financial services.
+I'm reaching out about the Business Analyst position at Cleo (https://www.builtinchicago.org/job/business-analyst/7933617). With my background as a Business Systems Analyst at a Big 4 firm and Consulting Firm, I've developed strong expertise in requirements gathering, process mapping, and cross-functional stakeholder management—skills that align perfectly with Cleo's mission to democratize financial services.
 
-At Deloitte, I led multiple system implementations and authored comprehensive BRDs/FRDs that drove successful project outcomes. I've also built operational systems from the ground up at Kavalier, managing the full SDLC for customer-facing platforms.
+At a Big 4 firm, I led multiple system implementations and authored comprehensive BRDs/FRDs that drove successful project outcomes. I've also built operational systems from the ground up at Company A, managing the full SDLC for customer-facing platforms.
 
 I'd love to discuss how my analytical background and systems thinking can contribute to Cleo's growth. Are you available for a brief call this week?
 
 Best regards,
-Idrees Kamal
-B.S. Computer Science, Northwestern University
+Your Name
+B.S. Computer Science, University Name
 ```
 
 ---

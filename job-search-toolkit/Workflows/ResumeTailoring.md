@@ -23,20 +23,21 @@
 │                                                                 │
 │  The ResumeGenerator.js hardcodes job order. You cannot change  │
 │  company names, locations, dates, or order - only bullets,      │
-│  skills, summary, and titles for Kavalier/Vicegerent.           │
+│  skills, summary, and titles for jobs 1 & 2.                    │
 │                                                                 │
-│  LOCKED ORDER (enforced automatically):                         │
-│  1. Kavalier Coaching | Chicago, IL      (Sep 2024 - Dec 2025)  │
-│  2. Vicegerent Custom Clothing | Chicago (Jun 2022 - Sep 2024)  │
-│  3. Oliver Wyman | Chicago, IL           (Mar 2022 - Jun 2022)  │
-│  4. Deloitte Consulting LLP | Chicago    (Oct 2020 - Mar 2022)  │
+│  LOCKED ORDER (enforced automatically - CUSTOMIZE in            │
+│  ResumeGenerator.js LOCKED_RESUME_DATA):                        │
+│  1. Company A | City, ST        (most recent dates)             │
+│  2. Company B | City, ST        (previous dates)                │
+│  3. Company C | City, ST        (earlier dates)                 │
+│  4. Company D | City, ST        (earliest dates)                │
 │                                                                 │
-│  ✓ OK: Customize titles for Kavalier & Vicegerent               │
+│  ✓ OK: Customize titles for Jobs 1 & 2 (dynamic titles)        │
 │  ✓ OK: Reorder BULLETS within a single job                      │
 │  ✓ OK: Customize SKILLS categories                              │
 │  ✗ LOCKED: Company names, locations, dates                      │
-│  ✗ LOCKED: Oliver Wyman title ("Senior Consultant")             │
-│  ✗ LOCKED: Deloitte title ("Business Technology Analyst")       │
+│  ✗ LOCKED: Job 3 title (set in LOCKED_RESUME_DATA)              │
+│  ✗ LOCKED: Job 4 title (set in LOCKED_RESUME_DATA)              │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -48,15 +49,15 @@ The `ResumeGenerator.js` enforces immutable fields at code level. Only provide d
 
 | Category | Field | Status |
 |----------|-------|--------|
-| Header | Name, contact info | LOCKED |
-| Jobs | Company names | LOCKED: Kavalier Coaching, Vicegerent Custom Clothing, Oliver Wyman, Deloitte Consulting LLP |
-| Jobs | Locations | LOCKED: All Chicago, IL |
-| Jobs | Dates | LOCKED: Sep 2024-Dec 2025, Jun 2022-Sep 2024, Mar 2022-Jun 2022, Oct 2020-Mar 2022 |
-| Jobs | Oliver Wyman title | LOCKED: "Senior Consultant" |
-| Jobs | Deloitte title | LOCKED: "Business Technology Analyst" |
-| Jobs | Kavalier title | **DYNAMIC** via `titles.kavalier` |
-| Jobs | Vicegerent title | **DYNAMIC** via `titles.vicegerent` |
-| Education | Degree info | LOCKED: Northwestern University, B.S. Computer Science, 2017-2020 |
+| Header | Name, contact info | LOCKED (set in `ResumeGenerator.js` LOCKED_RESUME_DATA) |
+| Jobs | Company names | LOCKED (set in LOCKED_RESUME_DATA) |
+| Jobs | Locations | LOCKED (set in LOCKED_RESUME_DATA) |
+| Jobs | Dates | LOCKED (set in LOCKED_RESUME_DATA) |
+| Jobs | Job 3 title | LOCKED (set in LOCKED_RESUME_DATA) |
+| Jobs | Job 4 title | LOCKED (set in LOCKED_RESUME_DATA) |
+| Jobs | Job 1 title | **DYNAMIC** via `titles.job1` |
+| Jobs | Job 2 title | **DYNAMIC** via `titles.job2` |
+| Education | Degree info | LOCKED (set in LOCKED_RESUME_DATA) |
 | Content | professional_title | **DYNAMIC** |
 | Content | summary | **DYNAMIC** |
 | Content | skills | **DYNAMIC** |
@@ -76,19 +77,19 @@ The `ResumeGenerator.js` enforces immutable fields at code level. Only provide d
 
 ## Step 0: Load Career Context Files
 
-Load these files from `04 - Career/CONTEXT/`:
+Load these files from `~/Career/CONTEXT/`:
 1. **Professional Background - Index.md** (always first)
 2. **Experience Details.md** - For verifiable achievements and metrics
 3. **Technical Skills.md** - For skills inventory and resume tailoring notes
 4. **Honest Gaps.md** - For authenticity constraints
 
-**DO NOT extract or modify locked fields** (header, company names, locations, dates, Oliver Wyman/Deloitte titles) - these are enforced by the generator.
+**DO NOT extract or modify locked fields** (header, company names, locations, dates, locked job titles) - these are enforced by the generator.
 
 **Focus extraction on DYNAMIC fields only:**
 - Verifiable achievements for bullet crafting
 - Skills inventory for skills section
 - Summary patterns to adapt
-- Titles for Kavalier & Vicegerent (customize per job posting)
+- Titles for Job 1 & Job 2 (customize per job posting)
 
 > **Generator:** Use `ResumeGenerator.js` with JSON containing only dynamic fields. Locked fields are injected automatically.
 
@@ -130,17 +131,17 @@ Load these files from `04 - Career/CONTEXT/`:
 **Example of correct bullet reordering:**
 
 ```
-Kavalier Coaching (Sep 2024 - Dec 2025)           ← Title is DYNAMIC
+Company A (Sep 2024 - Dec 2025)           ← Title is DYNAMIC
 • [Most relevant bullet to job posting]           ← Bullets reordered within this job
 • [Second most relevant bullet]
 
-Vicegerent Custom Clothing (Jun 2022 - Sep 2024)  ← Title is DYNAMIC
+Company B (Jun 2022 - Sep 2024)  ← Title is DYNAMIC
 • [Bullets reordered within this job]
 
-Oliver Wyman (Mar 2022 - Jun 2022)                ← Title LOCKED: "Senior Consultant"
+Consulting Firm (Mar 2022 - Jun 2022)                ← Title LOCKED: "Senior Consultant"
 • [Bullets reordered within this job]
 
-Deloitte Consulting LLP (Oct 2020 - Mar 2022)     ← Title LOCKED: "Business Technology Analyst"
+Enterprise Corp (Oct 2020 - Mar 2022)     ← Title LOCKED: "Business Technology Analyst"
 • [Bullets reordered within this job]
 ```
 
@@ -196,14 +197,14 @@ Prepare input JSON with **ONLY dynamic fields** (locked fields are injected auto
     "Business": ["Process Optimization", "Stakeholder Management"]
   },
   "titles": {
-    "kavalier": "Founder & SaaS Implementation Lead",
-    "vicegerent": "Business Operations & Technology Analyst"
+    "job1": "Founder & SaaS Implementation Lead",
+    "job2": "Business Operations & Technology Analyst"
   },
   "bullets": [
-    ["Kavalier bullet 1...", "Kavalier bullet 2...", "Kavalier bullet 3..."],
-    ["Vicegerent bullet 1...", "Vicegerent bullet 2...", "Vicegerent bullet 3..."],
-    ["Oliver Wyman bullet 1...", "Oliver Wyman bullet 2..."],
-    ["Deloitte bullet 1...", "Deloitte bullet 2...", "Deloitte bullet 3...", "Deloitte bullet 4..."]
+    ["Company A bullet 1...", "Company A bullet 2...", "Company A bullet 3..."],
+    ["Company B bullet 1...", "Company B bullet 2...", "Company B bullet 3..."],
+    ["Consulting Firm bullet 1...", "Consulting Firm bullet 2..."],
+    ["Enterprise Corp bullet 1...", "Enterprise Corp bullet 2...", "Enterprise Corp bullet 3...", "Enterprise Corp bullet 4..."]
   ]
 }
 ```
@@ -219,15 +220,15 @@ EOF
 
 2. Generate DOCX:
 ```bash
-node ~/.claude/skills/JobSearchToolkit/Templates/ResumeGenerator.js /tmp/resume_data.json "CompanyName"
+node ./Templates/ResumeGenerator.js /tmp/resume_data.json "CompanyName"
 ```
 
 3. Verify one page (if needed):
 ```bash
-python ~/.claude/skills/JobSearchToolkit/Tools/verify_page_count.py ~/Downloads/Idrees_Kamal_Resume_Company.docx
+python ./Tools/verify_page_count.py ~/Downloads/Your_Name_Resume_Company.docx
 ```
 
-**File naming**: `Idrees_Kamal_Resume_CompanyName.docx`
+**File naming**: `Your_Name_Resume_CompanyName.docx`
 **Output location**: `~/Downloads/`
 
 ---
@@ -273,12 +274,14 @@ Run all 3 passes sequentially. Each pass has 3 binary (YES/NO) checks.
 
 ### Known Authenticity Constraints (DO NOT enhance)
 
+**CUSTOMIZE:** Fill in your own authenticity constraints below. These prevent the system from overselling areas where your experience is limited.
+
 | Claim Area | Reality |
 |------------|---------|
-| Oliver Wyman Python work | Minimal involvement, project stalled |
-| SQL proficiency | Foundational from coursework, not production |
-| Enterprise CRM | Only SMB tools (Notion, GoHighLevel) |
-| Management scope | Limited to 3 junior BAs at Deloitte |
+| [Skill/tool X] | [Actual proficiency level - e.g., "Foundational from coursework, not production"] |
+| [Technology Y] | [Honest assessment - e.g., "Used briefly on one project"] |
+| [Domain Z] | [Real scope - e.g., "Only SMB tools, not enterprise platforms"] |
+| [Leadership claim] | [True scope - e.g., "Led 2-person team, not department-level"] |
 
 ---
 
@@ -376,14 +379,14 @@ Before returning tailored resume:
 
 - [ ] Jobs in reverse chronological order (ENFORCED BY GENERATOR - automatic)
 - [ ] Input JSON contains only dynamic fields (no locked fields)
-- [ ] `titles.kavalier` and `titles.vicegerent` provided and appropriate for role
+- [ ] `titles.job1` and `titles.job2` provided and appropriate for role
 - [ ] Keyword match ≥ 75%
 - [ ] ATS formatting compliant
 - [ ] Exactly 1 page
 - [ ] All 9 quality checks pass
 - [ ] ≥ 2 bullets per job
 - [ ] All claims verifiable
-- [ ] DOCX file generated: `Idrees_Kamal_Resume_CompanyName.docx`
+- [ ] DOCX file generated: `Your_Name_Resume_CompanyName.docx`
 
 ---
 

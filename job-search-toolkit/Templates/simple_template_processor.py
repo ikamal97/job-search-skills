@@ -344,9 +344,9 @@ def _reduce_one_item(tailored_data: Dict, job_keywords: List[str] = None) -> boo
 def find_template(verbose: bool = True) -> Optional[str]:
     """Find resume template in standard locations with diagnostics."""
     search_locations = [
-        "/Users/idreeskamal/Downloads/Idrees_Kamal_BSA_Resume_01.02.26.docx",
+        "~/Downloads/Your_Name_Resume.docx",
         os.path.expanduser("~/Downloads/*Resume*.docx"),  # Fallback pattern
-        "/Users/idreeskamal/Documents/Obsidian Vault/04 - Personal Operating System/Career/*.docx"
+        "~/Career/CONTEXT/*.docx"
     ]
 
     if verbose:
@@ -436,9 +436,9 @@ def generate_resume_from_template(
         raise FileNotFoundError(
             "Resume template not found.\n"
             "Searched locations:\n"
-            "  1. /Users/idreeskamal/Downloads/Idrees_Kamal_BSA_Resume_01.02.26.docx\n"
+            "  1. ~/Downloads/Your_Name_Resume.docx\n"
             "  2. ~/Downloads/*Resume*.docx\n"
-            "  3. Career folder (04 - Personal Operating System/Career/)\n"
+            "  3. ~/Career/CONTEXT/*.docx\n"
             "Please ensure template exists in one of these locations."
         )
 
@@ -733,10 +733,10 @@ def _replace_experience_bullets(doc, all_paragraphs, experience_list: List[Dict]
     # Map company names to their expected experience data
     # The job order must match: KAVALIER, VICEGERENT, OLIVER WYMAN, DELOITTE
     job_configs = [
-        {"name": "KAVALIER", "bullet_start": 15, "bullet_count": 3},
-        {"name": "VICEGERENT", "bullet_start": 21, "bullet_count": 3},
-        {"name": "OLIVER WYMAN", "bullet_start": 27, "bullet_count": 2},
-        {"name": "DELOITTE", "bullet_start": 32, "bullet_count": 4},
+        {"name": "COMPANY_A", "bullet_start": 15, "bullet_count": 3},
+        {"name": "COMPANY_B", "bullet_start": 21, "bullet_count": 3},
+        {"name": "CONSULTING_FIRM", "bullet_start": 27, "bullet_count": 2},
+        {"name": "ENTERPRISE_CORP", "bullet_start": 32, "bullet_count": 4},
     ]
 
     # Process in reverse order to avoid index shifting issues
