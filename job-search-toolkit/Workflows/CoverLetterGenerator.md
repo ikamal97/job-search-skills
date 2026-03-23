@@ -33,7 +33,7 @@
 **Read BEFORE any generation from `~/Career/CONTEXT/`:**
 1. **Professional Background - Index.md** (always first)
 2. **Experience Details.md** - For achievements with metrics
-3. **AI-Automation Profile.md** - For AI/automation stories
+3. **Specialization Profile.md** - For domain expertise and key project stories
 4. **Honest Gaps.md** - For what NOT to oversell
 
 Extract:

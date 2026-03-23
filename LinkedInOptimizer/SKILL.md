@@ -52,7 +52,7 @@ Determine the optimization scope based on user request:
 |------|---------|---------------|
 | **Professional Background - Index.md** | Entry point, always first | ALL workflows |
 | **Experience Details.md** | Achievements with metrics | Profile optimization, headline |
-| **AI-Automation Profile.md** | AI/automation stories | For tech/AI-focused profiles |
+| **Specialization Profile.md** | Key projects, domain expertise | For showcasing your specialization |
 | **Technical Skills.md** | Skills inventory | Skills section optimization |
 | **Honest Gaps.md** | Authenticity constraints | ALL workflows |
 
@@ -61,10 +61,10 @@ Determine the optimization scope based on user request:
 | LinkedIn Section | CONTEXT Files Required |
 |------------------|------------------------|
 | Headline | Professional Background - Index.md, Technical Skills.md |
-| About | Professional Background - Index.md, Experience Details.md, AI-Automation Profile.md |
+| About | Professional Background - Index.md, Experience Details.md, Specialization Profile.md |
 | Experience | Experience Details.md, Honest Gaps.md |
 | Skills | Technical Skills.md |
-| Featured | AI-Automation Profile.md, Interview Prep.md |
+| Featured | Specialization Profile.md, Interview Prep.md |
 | Recommendations | Interview Prep.md |
 
 ## Hard Constraints (NON-NEGOTIABLE)

@@ -107,8 +107,8 @@ This toolkit is designed to work alongside the `job-search-specialist` agent:
 │  2. Experience Details.md                                       │
 │     → Detailed company experience, cross-functional work       │
 │                                                                 │
-│  3. AI-Automation Profile.md                                    │
-│     → AI/automation experience, projects, technical depth      │
+│  3. Specialization Profile.md                                   │
+│     → Domain expertise, key projects, technical depth          │
 │                                                                 │
 │  4. Technical Skills.md                                         │
 │     → Skills inventory, role recommendations, resume notes     │
@@ -126,16 +126,16 @@ This toolkit is designed to work alongside the `job-search-specialist` agent:
 | Workflow | Files to Load |
 |----------|---------------|
 | **ResumeTailoring** | Index + Experience Details + Technical Skills + Honest Gaps |
-| **CoverLetterGenerator** | Index + Experience Details + AI-Automation Profile |
+| **CoverLetterGenerator** | Index + Experience Details + Specialization Profile |
 | **FitScoreCalculation** | Index + Technical Skills + Experience Details |
-| **HiringManagerOutreach** | Index + AI-Automation Profile + Interview Prep |
+| **HiringManagerOutreach** | Index + Specialization Profile + Interview Prep |
 | **ResumeReviewer** | Index + Experience Details + Honest Gaps |
 | **Interview Prep** | Index + Interview Prep + Honest Gaps |
 
 **File purposes:**
 - `Professional Background - Index.md` - Entry point, always load first
 - `Experience Details.md` - Company-by-company breakdown, metrics
-- `AI-Automation Profile.md` - AI/automation projects, problem-solving stories
+- `Specialization Profile.md` - Domain expertise, key projects, problem-solving stories
 - `Technical Skills.md` - Skills inventory, role recommendations
 - `Interview Prep.md` - Soundbites, STAR stories, behavioral examples
 - `Honest Gaps.md` - Limitations, authenticity constraints

@@ -53,7 +53,7 @@ Both skills rely on career context files to generate accurate, personalized mate
 |------|---------|
 | `Professional Background - Index.md` | Quick reference: career timeline, target roles, job criteria |
 | `Experience Details.md` | Company-by-company breakdown with metrics and achievements |
-| `AI-Automation Profile.md` | Technical projects and problem-solving stories |
+| `Specialization Profile.md` | Key projects, domain expertise, and problem-solving stories |
 | `Technical Skills.md` | Skills inventory and proficiency levels |
 | `Interview Prep.md` | STAR stories, soundbites, behavioral examples |
 | `Honest Gaps.md` | Limitations and what NOT to overclaim |
