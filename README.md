@@ -2,6 +2,14 @@
 
 Two Claude Code skills that automate the job search process end-to-end: from discovering roles and tailoring resumes to optimizing your LinkedIn profile.
 
+## Quick Start
+
+```
+/ineedajob
+```
+
+That's it. The `/ineedajob` workflow interviews you about your career, skills, and goals, then generates all the context files that power every other workflow. No manual setup required.
+
 ## Skills Included
 
 ### 1. Job Search Toolkit (`job-search-toolkit/`)
@@ -9,6 +17,7 @@ Two Claude Code skills that automate the job search process end-to-end: from dis
 Automated job discovery, resume tailoring, and application material generation.
 
 **Workflows:**
+- **INeedAJob** — **START HERE** — Career intake interview that generates all context files
 - **JobBoardSearch** — Search LinkedIn, Indeed, Glassdoor, Built In for roles matching your criteria
 - **JobDescriptionParser** — Extract and structure requirements from any job posting
 - **JobVerification** — Validate postings are live, remote, and recent (mandatory guardrail)
@@ -47,7 +56,7 @@ cp -r job-search-skills/LinkedInOptimizer ~/.claude/skills/
 
 ### 2. Create your Career Context
 
-Both skills rely on career context files to generate accurate, personalized materials. Create a `CONTEXT/` folder in your career directory with these files:
+Run `/ineedajob` and the interview workflow will create all 6 context files for you automatically:
 
 | File | Purpose |
 |------|---------|
@@ -58,7 +67,7 @@ Both skills rely on career context files to generate accurate, personalized mate
 | `Interview Prep.md` | STAR stories, soundbites, behavioral examples |
 | `Honest Gaps.md` | Limitations and what NOT to overclaim |
 
-Update the context folder path in `job-search-toolkit/SKILL.md` and `LinkedInOptimizer/SKILL.md` to match your setup.
+Or create them manually — update the context folder path in `job-search-toolkit/SKILL.md` and `LinkedInOptimizer/SKILL.md` to match your setup.
 
 ### 3. Configure your resume template
 
@@ -79,6 +88,11 @@ pip install python-docx  # For Python-based generators
 Once installed, use natural language with Claude Code:
 
 ```
+# First time? Start here:
+/ineedajob                    # Full career interview (recommended)
+/ineedajob quick              # Abbreviated version (4 phases)
+/ineedajob update             # Update existing context files
+
 # Job Search
 "Search for remote Product Manager roles paying $120k+"
 "Parse this job description and calculate my fit score"
@@ -108,7 +122,10 @@ Edit `job-search-toolkit/SKILL.md` to customize:
 ## How It Works
 
 ```
-User Request
+/ineedajob (START HERE)
+    │
+    ▼
+Career Context Files (6 files generated from interview)
     │
     ├─► JobBoardSearch ──► JobVerification ──► HiringManagerResearch
     │                                              │

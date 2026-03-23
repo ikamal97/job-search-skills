@@ -13,6 +13,7 @@ This skill provides tools to automate the job search process, from discovering r
 
 | Workflow | Trigger | File |
 |----------|---------|------|
+| **INeedAJob** | `/ineedajob`, "I need a job", "set up my job search", "help me find a job" | `Workflows/INeedAJob.md` (**START HERE** — interviews you and creates all career context files) |
 | **JobBoardSearch** | "search jobs", "find positions", "job boards" | `Workflows/JobBoardSearch.md` |
 | **JobDescriptionParser** | "parse job description", "extract requirements", "analyze posting" | `Workflows/JobDescriptionParser.md` |
 | **JobVerification** | MANDATORY after any job discovery | `Workflows/JobVerification.md` |
