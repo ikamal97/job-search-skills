@@ -225,11 +225,11 @@ node ./Templates/ResumeGenerator.js /tmp/resume_data.json "CompanyName"
 
 3. Verify one page (if needed):
 ```bash
-python ./Tools/verify_page_count.py ~/Downloads/Your_Name_Resume_Company.docx
+python ./Tools/verify_page_count.py Output/Your_Name_Resume_Company.docx
 ```
 
 **File naming**: `Your_Name_Resume_CompanyName.docx`
-**Output location**: `~/Downloads/`
+**Output location**: `Output/` (relative to skill root)
 
 ---
 
@@ -353,7 +353,7 @@ Run all 3 passes sequentially. Each pass has 3 binary (YES/NO) checks.
     "authenticity": true,
     "resume_generator": true
   },
-  "file_generated": "~/Downloads/FirstName_LastName_Resume_Company.docx",
+  "file_generated": "Output/FirstName_LastName_Resume_Company.docx",
   "timestamp": "2026-01-15T00:00:00Z"
 }
 ```

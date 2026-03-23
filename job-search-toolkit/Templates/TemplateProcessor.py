@@ -47,10 +47,10 @@ class ResumeTemplateProcessor:
         Returns:
             Path to template file or None if not found
         """
+        skill_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         search_locations = [
-            "~/Downloads/Your_Name_Resume.docx",
-            os.path.expanduser("~/Downloads/*Resume*.docx"),  # Fallback pattern
-            os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "CONTEXT", "*.docx")
+            os.path.join(skill_root, "Templates", "resume-template.docx"),
+            os.path.join(skill_root, "CONTEXT", "*.docx")
         ]
 
         if verbose:
@@ -526,13 +526,13 @@ def generate_resume_from_template(
             - experience: [{company, location, title, dates, bullets}]
             - education: Education string
         company_name: Company name for filename
-        output_dir: Output directory (defaults to ~/Downloads)
+        output_dir: Output directory (defaults to Output/ relative to skill root)
 
     Returns:
         Path to generated DOCX file
     """
     if output_dir is None:
-        output_dir = os.path.expanduser("~/Downloads")
+        output_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "Output")
 
     processor = ResumeTemplateProcessor()
 
@@ -543,9 +543,8 @@ def generate_resume_from_template(
             raise FileNotFoundError(
                 "Resume template not found.\n"
                 "Searched locations:\n"
-                "  1. ~/Downloads/Your_Name_Resume.docx\n"
-                "  2. ~/Downloads/*Resume*.docx\n"
-                "  3. CONTEXT/*.docx (relative to skill root)\n"
+                "  1. Templates/resume-template.docx (relative to skill root)\n"
+                "  2. CONTEXT/*.docx (relative to skill root)\n"
                 "Please ensure template exists in one of these locations."
             )
 

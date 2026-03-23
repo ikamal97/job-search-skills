@@ -79,12 +79,12 @@ For each job, spawn TWO parallel Task agents:
 Task 1 (Resume):
   - Invoke ResumeTailoring workflow
   - Input: application_url, company
-  - Output: ~/Downloads/Your_Name_Resume_[Company].docx
+  - Output: Output/Your_Name_Resume_[Company].docx
 
 Task 2 (Cover Letter):
   - Invoke CoverLetterGenerator workflow
   - Input: application_url, company
-  - Output: ~/Downloads/Your_Name_CoverLetter_[Company].docx
+  - Output: Output/Your_Name_CoverLetter_[Company].docx
 ```
 
 Wait for both to complete before post-processing.
@@ -109,10 +109,10 @@ mkdir -p "~/Career/Generated Assets/[Company_Sanitized]/"
 
 **Move files:**
 ```bash
-mv ~/Downloads/Your_Name_Resume_[Company].docx \
+mv Output/Your_Name_Resume_[Company].docx \
    "~/Career/Generated Assets/[Company]/Your_Name_Resume_[Company].docx"
 
-mv ~/Downloads/Your_Name_CoverLetter_[Company].docx \
+mv Output/Your_Name_CoverLetter_[Company].docx \
    "~/Career/Generated Assets/[Company]/Your_Name_CoverLetter_[Company].docx"
 ```
 

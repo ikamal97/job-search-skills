@@ -1,5 +1,6 @@
 const { Document, Packer, Paragraph, TextRun, AlignmentType } = require('docx');
 const fs = require('fs');
+const path = require('path');
 
 const doc = new Document({
   styles: {
@@ -114,7 +115,9 @@ const doc = new Document({
 });
 
 Packer.toBuffer(doc).then(buffer => {
-  const outputPath = "~/Downloads/Your_Name_Resume_Absorb_Software_v2.docx";
+  const outputDir = path.join(__dirname, '..', 'Output');
+  if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true });
+  const outputPath = path.join(outputDir, 'Your_Name_Resume_Absorb_Software_v2.docx');
   fs.writeFileSync(outputPath, buffer);
   console.log("✓ Clean resume created: " + outputPath);
 });

@@ -330,7 +330,8 @@ if (require.main === module) {
       const data = mergeWithLockedData(input);
       const spec = loadSpec(path.join(__dirname, 'resume-spec.yaml'));
 
-      const outputDir = path.join(os.homedir(), 'Downloads');
+      const outputDir = path.join(__dirname, '..', 'Output');
+      if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true });
       const safeName = LOCKED_RESUME_DATA.header.name.replace(/\s+/g, '_');
       const safeCompany = companyName.replace(/\s+/g, '_');
       const outputPath = path.join(outputDir, `${safeName}_Resume_${safeCompany}.docx`);

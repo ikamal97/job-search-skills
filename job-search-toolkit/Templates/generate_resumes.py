@@ -300,12 +300,15 @@ def create_tailored_resume(job_key, template_path, output_path):
 
 def main():
     """Generate all 4 tailored resumes."""
-    template_path = "~/Downloads/Your_Name_Resume.docx"
+    skill_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    template_path = os.path.join(skill_root, "Templates", "resume-template.docx")
+    output_dir = os.path.join(skill_root, "Output")
+    os.makedirs(output_dir, exist_ok=True)
 
     results = []
     for job_key, job_data in JOBS.items():
         company_name = job_data["company"].replace(" ", "_")
-        output_path = f"~/Downloads/Your_Name_Resume_{company_name}.docx"
+        output_path = os.path.join(output_dir, f"Your_Name_Resume_{company_name}.docx")
 
         print(f"\nGenerating resume for {job_data['company']} ({job_data['title']})...")
         create_tailored_resume(job_key, template_path, output_path)

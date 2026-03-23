@@ -155,7 +155,7 @@ Invoke ResumeTailoring workflow:
 - Update professional summary for role fit
 - Target: 75-85% keyword match
 
-**Output:** `~/Downloads/BespokeApplications_YYYYMMDD_HHMMSS/XX_Company_Role/Your_Name_Resume_Company.docx`
+**Output:** `Output/BespokeApplications_YYYYMMDD_HHMMSS/XX_Company_Role/Your_Name_Resume_Company.docx`
 
 **Step 3.2: Generate Cover Letter**
 
@@ -166,7 +166,7 @@ Invoke CoverLetterGenerator workflow:
 - Include measurable achievements
 - Target: ATS score 85+/100
 
-**Output:** `~/Downloads/BespokeApplications_YYYYMMDD_HHMMSS/XX_Company_Role/Your_Name_CoverLetter_Company.docx`
+**Output:** `Output/BespokeApplications_YYYYMMDD_HHMMSS/XX_Company_Role/Your_Name_CoverLetter_Company.docx`
 
 **Step 3.3: Format Hiring Manager Outreach**
 
@@ -176,7 +176,7 @@ Create markdown file with:
 - Personalized outreach email (from HiringManagerResearch)
 - Alternative contact strategies if primary unknown
 
-**Output:** `~/Downloads/BespokeApplications_YYYYMMDD_HHMMSS/XX_Company_Role/hiring_manager_outreach.md`
+**Output:** `Output/BespokeApplications_YYYYMMDD_HHMMSS/XX_Company_Role/hiring_manager_outreach.md`
 
 **Step 3.4: Generate Job Metadata**
 
@@ -220,7 +220,7 @@ Create JSON with complete job information:
 }
 ```
 
-**Output:** `~/Downloads/BespokeApplications_YYYYMMDD_HHMMSS/XX_Company_Role/job_metadata.json`
+**Output:** `Output/BespokeApplications_YYYYMMDD_HHMMSS/XX_Company_Role/job_metadata.json`
 
 ---
 
@@ -229,7 +229,7 @@ Create JSON with complete job information:
 **Step 4.1: Create Folder Structure**
 
 ```bash
-mkdir -p ~/Downloads/BespokeApplications_YYYYMMDD_HHMMSS/
+mkdir -p Output/BespokeApplications_YYYYMMDD_HHMMSS/
 ```
 
 **Step 4.2: Organize by Company**
@@ -237,7 +237,7 @@ mkdir -p ~/Downloads/BespokeApplications_YYYYMMDD_HHMMSS/
 Folders are numbered by fit score rank:
 
 ```
-~/Downloads/BespokeApplications_20260112_143022/
+Output/BespokeApplications_20260112_143022/
 ├── SUMMARY.md
 ├── batch_metadata.json
 ├── all_verified_jobs.json
@@ -332,7 +332,7 @@ Each folder contains:
 | Hiring manager not found | Use placeholder | "Hiring Manager: [Department Head]" |
 | URL verification timeout | Skip job | "Job excluded: URL verification timeout" |
 
-**Error Log:** `~/Downloads/BespokeApplications_YYYYMMDD_HHMMSS/error_log.txt`
+**Error Log:** `Output/BespokeApplications_YYYYMMDD_HHMMSS/error_log.txt`
 
 ---
 
@@ -379,7 +379,7 @@ User: "Search LinkedIn and Built In for Implementation Manager roles and prepare
 
 **Required Files:**
 - `CONTEXT/` folder (relative to skill root) - Career context files (Index, Experience Details, Technical Skills, Honest Gaps)
-- Template DOCX in Downloads or Career folder
+- Template DOCX at `Templates/resume-template.docx` (relative to skill root)
 
 ---
 
@@ -388,6 +388,6 @@ User: "Search LinkedIn and Built In for Implementation Manager roles and prepare
 After completion, return:
 
 1. **Summary statement:** "Generated 5 bespoke application packages for remote BSA roles"
-2. **Folder path:** `~/Downloads/BespokeApplications_20260112_143022/`
+2. **Folder path:** `Output/BespokeApplications_20260112_143022/`
 3. **Quick stats:** Jobs found, verified, average fit score
 4. **Next actions:** "Open SUMMARY.md for application checklist"

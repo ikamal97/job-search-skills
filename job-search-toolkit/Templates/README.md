@@ -34,7 +34,7 @@ python3 generate_resume.py
 
 This will generate a test resume at:
 ```
-~/Downloads/IDREES_KAMAL_Resume_Test_Company.docx
+Output/IDREES_KAMAL_Resume_Test_Company.docx
 ```
 
 Open the file and verify it matches the template formatting.
@@ -79,7 +79,7 @@ resume_data = {
 output_path = generate_resume_from_template(
     tailored_data=resume_data,
     company_name="Google",
-    output_dir=os.path.expanduser("~/Downloads")
+    output_dir=os.path.join(os.path.dirname(__file__), '..', 'Output')
 )
 
 print(f"Resume generated: {output_path}")
@@ -116,7 +116,7 @@ from simple_template_processor import generate_resume_from_template
 output_file = generate_resume_from_template(
     tailored_data=tailored_resume_data,
     company_name=job_info["company"],
-    output_dir="~/Downloads"
+    output_dir=os.path.join(os.path.dirname(__file__), '..', 'Output')
 )
 ```
 
@@ -126,7 +126,7 @@ output_file = generate_resume_from_template(
 
 The system auto-searches for template files in:
 
-1. `~/Downloads/Your_Name_Resume.docx`
+1. `Templates/resume-template.docx` (relative to skill root)
 2. `CONTEXT/*.docx` (relative to skill root)
 
 **Template refers to:** The universal structure and formatting specification. Content is dynamic based on job description.
@@ -240,7 +240,7 @@ sys.path.insert(0, "~/.claude/skills/docx")
 **Cause:** Template file missing from expected locations.
 
 **Solution:** Verify template exists at:
-- `~/Downloads/Your_Name_Resume.docx`, OR
+- `Templates/resume-template.docx` (relative to skill root), OR
 - `CONTEXT/` (any .docx file, relative to skill root)
 
 ### Error: "Multiple nodes found"

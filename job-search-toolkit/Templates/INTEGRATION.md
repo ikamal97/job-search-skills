@@ -55,7 +55,7 @@ output_path = generate_resume_from_template(
         "education": education_string
     },
     company_name=company_name,
-    output_dir=os.path.expanduser("~/Downloads")
+    output_dir=os.path.join(os.path.dirname(__file__), '..', 'Output')
 )
 
 print(f"✓ Resume generated: {output_path}")
@@ -96,10 +96,12 @@ def generate_tailored_resume(tailored_data: dict, company_name: str) -> str:
     Returns:
         Path to generated DOCX file
     """
+    output_dir = os.path.join(os.path.dirname(__file__), 'Output')
+    os.makedirs(output_dir, exist_ok=True)
     return generate_resume_from_template(
         tailored_data=tailored_data,
         company_name=company_name,
-        output_dir=os.path.expanduser("~/Downloads")
+        output_dir=output_dir
     )
 ```
 
@@ -279,7 +281,7 @@ print(f"✓ Test successful: {result}")
 python3 test_integration.py
 ```
 
-**Expected:** Resume generated at `~/Downloads/IDREES_KAMAL_Resume_Test_Integration.docx`
+**Expected:** Resume generated at `Output/IDREES_KAMAL_Resume_Test_Integration.docx` (relative to skill root)
 
 ---
 

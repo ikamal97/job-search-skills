@@ -71,7 +71,7 @@ Or create them manually — place context files in `job-search-toolkit/CONTEXT/`
 
 ### 3. Configure your resume template
 
-Place your base resume as a `.docx` file in `~/Downloads/` or your career folder. Update the template path in `job-search-toolkit/SKILL.md` under "Template Locations".
+Place your base resume as a `.docx` file at `job-search-toolkit/Templates/resume-template.docx`. This keeps the skill fully self-contained.
 
 ### 4. Install template dependencies (optional)
 

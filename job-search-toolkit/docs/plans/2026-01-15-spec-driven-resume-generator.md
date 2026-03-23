@@ -648,7 +648,8 @@ if (require.main === module) {
       const data = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
       const spec = loadSpec(path.join(__dirname, 'resume-spec.yaml'));
 
-      const outputDir = path.join(os.homedir(), 'Downloads');
+      const outputDir = path.join(__dirname, '..', 'Output');
+      if (!fs.existsSync(outputDir)) fs.mkdirSync(outputDir, { recursive: true });
       const safeName = data.header.name.replace(/\s+/g, '_');
       const safeCompany = companyName.replace(/\s+/g, '_');
       const outputPath = path.join(outputDir, `${safeName}_Resume_${safeCompany}.docx`);
@@ -754,16 +755,16 @@ git commit -m "test: add test data for resume generator"
 **Step 1: Generate test resume**
 
 Run: `cd ./Templates && node ResumeGenerator.js test-resume-data.json TestCompany`
-Expected: `~/Downloads/IDREES_KAMAL_Resume_TestCompany.docx`
+Expected: `Output/IDREES_KAMAL_Resume_TestCompany.docx`
 
 **Step 2: Verify file exists**
 
-Run: `ls -la ~/Downloads/IDREES_KAMAL_Resume_TestCompany.docx`
+Run: `ls -la Output/IDREES_KAMAL_Resume_TestCompany.docx`
 Expected: File exists with non-zero size
 
 **Step 3: Open and visually verify**
 
-Run: `open ~/Downloads/IDREES_KAMAL_Resume_TestCompany.docx`
+Run: `open Output/IDREES_KAMAL_Resume_TestCompany.docx`
 Expected: Document opens in Word with correct formatting
 
 **Step 4: Commit (if any fixes needed)**
@@ -802,11 +803,11 @@ node ./Templates/ResumeGenerator.js /tmp/resume_data.json "CompanyName"
 
 3. Verify one page (if needed):
 ```bash
-python ./Tools/verify_page_count.py ~/Downloads/Name_Resume_Company.docx
+python ./Tools/verify_page_count.py Output/Name_Resume_Company.docx
 ```
 
 **File naming**: `FirstName_LastName_Resume_CompanyName.docx`
-**Output location**: `~/Downloads/`
+**Output location**: `Output/` (relative to skill root)
 ```
 
 **Step 2: Commit**

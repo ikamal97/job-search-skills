@@ -88,10 +88,12 @@ def main():
         print(f"Summary: {absorb_data['summary'][:80]}...")
         print()
 
+        output_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "Output")
+        os.makedirs(output_dir, exist_ok=True)
         output_path = generate_resume_from_template(
             tailored_data=absorb_data,
             company_name="Absorb_Software",
-            output_dir=os.path.expanduser("~/Downloads")
+            output_dir=output_dir
         )
 
         print("✓ Resume generated successfully!")

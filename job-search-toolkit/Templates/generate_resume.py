@@ -108,10 +108,12 @@ def main():
         print(f"- Company: Test_Company")
         print()
 
+        output_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "Output")
+        os.makedirs(output_dir, exist_ok=True)
         output_path = generate_resume_from_template(
             tailored_data=sample_data,
             company_name="Test_Company",
-            output_dir=os.path.expanduser("~/Downloads")
+            output_dir=output_dir
         )
 
         print("✓ Resume generated successfully!")
@@ -131,7 +133,7 @@ def main():
         print(f"ERROR: {e}")
         print()
         print("Make sure template file exists at:")
-        print("  ~/Downloads/Your_Name_Resume.docx")
+        print("  Templates/resume-template.docx (relative to skill root)")
         print("  OR")
         print("  CONTEXT/ (relative to skill root)")
         return 1

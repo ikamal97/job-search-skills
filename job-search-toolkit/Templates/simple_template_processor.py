@@ -343,10 +343,10 @@ def _reduce_one_item(tailored_data: Dict, job_keywords: List[str] = None) -> boo
 
 def find_template(verbose: bool = True) -> Optional[str]:
     """Find resume template in standard locations with diagnostics."""
+    skill_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     search_locations = [
-        "~/Downloads/Your_Name_Resume.docx",
-        os.path.expanduser("~/Downloads/*Resume*.docx"),  # Fallback pattern
-        os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "CONTEXT", "*.docx")
+        os.path.join(skill_root, "Templates", "resume-template.docx"),
+        os.path.join(skill_root, "CONTEXT", "*.docx")
     ]
 
     if verbose:
@@ -397,7 +397,7 @@ def generate_resume_from_template(
     Args:
         tailored_data: Resume data with keys: header, professional_title, summary, skills, experience, education
         company_name: Company name for filename
-        output_dir: Output directory (defaults to ~/Downloads)
+        output_dir: Output directory (defaults to Output/ relative to skill root)
         job_keywords: List of job-relevant keywords for one-page enforcement
         enforce_single_page: Whether to enforce one-page limit (default True)
 
@@ -425,7 +425,7 @@ def generate_resume_from_template(
             enforce_single_page = False
 
     if output_dir is None:
-        output_dir = os.path.expanduser("~/Downloads")
+        output_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "Output")
 
     # NO PRE-EMPTIVE REDUCTION - Start with full content
     # The verification loop below will reduce only if page count > 1
@@ -436,9 +436,8 @@ def generate_resume_from_template(
         raise FileNotFoundError(
             "Resume template not found.\n"
             "Searched locations:\n"
-            "  1. ~/Downloads/Your_Name_Resume.docx\n"
-            "  2. ~/Downloads/*Resume*.docx\n"
-            "  3. CONTEXT/*.docx (relative to skill root)\n"
+            "  1. Templates/resume-template.docx (relative to skill root)\n"
+            "  2. CONTEXT/*.docx (relative to skill root)\n"
             "Please ensure template exists in one of these locations."
         )
 

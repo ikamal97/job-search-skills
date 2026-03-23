@@ -13,7 +13,7 @@ A ruthless hiring manager simulation that critiques resumes and outputs revised 
 - **Target user:** Single user (leverages Career Context files)
 - **Modes:** General (default) or Job-specific (if JD provided)
 - **Critique style:** Ruthless, no sugarcoating, 30-second scan simulation
-- **Output:** Concise feedback (~200 words) + revised .docx to ~/Downloads/
+- **Output:** Concise feedback (~200 words) + revised .docx to Output/
 
 ## Triggers
 
@@ -61,7 +61,7 @@ A ruthless hiring manager simulation that critiques resumes and outputs revised 
 - Missing keywords: [list]
 - Fit score: X/10
 
-📄 Revised resume: ~/Downloads/Your_Name_Resume.docx
+📄 Revised resume: Output/Your_Name_Resume.docx
 ```
 
 ### DOCX Output
@@ -81,15 +81,15 @@ A ruthless hiring manager simulation that critiques resumes and outputs revised 
 5. Run critique framework (6 areas)
 6. Generate revision (apply fixes, integrate missed opportunities)
 7. Enforce one-page limit
-8. Output .docx to ~/Downloads/
+8. Output .docx to Output/
 9. Return concise feedback to context
 ```
 
 ## Auto-Find Logic
 
 Searches for most recent .docx with "resume" in filename:
-1. `~/Downloads/`
-2. `~/Career/`
+1. `Output/` (relative to skill root)
+2. `Templates/resume-template.docx`
 
 ## Integration
 

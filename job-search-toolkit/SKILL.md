@@ -205,7 +205,7 @@ User: "Tailor my resume for this Absorb Software Sales Operations Analyst role"
 → Enhances experience bullets with missing keywords
 → Updates professional summary with job-specific keywords
 → Final match: 83% (+16 percentage points improvement)
-→ Generates ATS-optimized DOCX: ~/Downloads/Your_Name_Resume_Absorb_Software.docx
+→ Generates ATS-optimized DOCX: Output/Your_Name_Resume_Absorb_Software.docx
 → Provides ATS score (91/100), keyword analysis, and honesty report
 ```
 
@@ -312,7 +312,7 @@ User: "Tailor my resume for this Absorb Software Sales Operations Analyst role"
 
 The system auto-searches for template files in these locations:
 
-1. `~/Downloads/Your_Name_Resume.docx`
+1. `Templates/resume-template.docx` (relative to skill root)
 2. `CONTEXT/` (any .docx file, relative to skill root)
 
 **Note:** "Template" refers to the universal structure and formatting specification. Content is dynamic based on job description.
@@ -363,7 +363,7 @@ Uses `Templates/TemplateProcessor.py` module with Document library (OOXML) for s
 
 **File Output:**
 - Filename format: `FirstName_LastName_Resume_CompanyName.docx`
-- Location: `~/Downloads/`
-- Example: `Your_Name_Resume_Absorb_Software.docx`
+- Location: `Output/` (relative to skill root)
+- Example: `Output/Your_Name_Resume_Absorb_Software.docx`
 
 ---

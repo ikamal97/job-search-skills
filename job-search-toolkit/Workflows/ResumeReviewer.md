@@ -28,12 +28,12 @@
 ## Step 0: Locate Resume
 
 **Auto-find logic** (in order):
-1. Most recent `.docx` with "resume" in filename in `~/Downloads/`
-2. Most recent `.docx` with "resume" in filename in `~/Career/`
+1. Most recent `.docx` with "resume" in filename in `Output/` (relative to skill root)
+2. `Templates/resume-template.docx` (base template)
 3. Explicit path if provided by user
 
 ```bash
-ls -t ~/Downloads/*[Rr]esume*.docx 2>/dev/null | head -1
+ls -t Output/*[Rr]esume*.docx 2>/dev/null | head -1
 ```
 
 **If not found**: Ask user for path. Do not proceed without resume.
@@ -142,7 +142,7 @@ node ./Templates/ResumeGenerator.js /tmp/resume_data.json "[CompanyName]"
 | General | `Your_Name_Resume.docx` |
 | Job-Specific | `Your_Name_Resume_[Company].docx` |
 
-**Output location**: `~/Downloads/`
+**Output location**: `Output/` (relative to skill root)
 
 ---
 
@@ -170,7 +170,7 @@ node ./Templates/ResumeGenerator.js /tmp/resume_data.json "[CompanyName]"
 - Missing keywords: [list]
 - Fit score: X/10
 
-📄 Revised resume: ~/Downloads/Your_Name_Resume.docx
+📄 Revised resume: Output/Your_Name_Resume.docx
 ```
 
 ---
@@ -202,7 +202,7 @@ Before returning:
 - [ ] Master Context cross-checked for missed opportunities
 - [ ] Revised resume generated via ResumeGenerator.js
 - [ ] Output ≤ 200 words
-- [ ] DOCX saved to ~/Downloads/
+- [ ] DOCX saved to Output/
 
 ---
 

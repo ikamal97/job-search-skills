@@ -169,7 +169,7 @@ Run all 3 passes sequentially. Each pass has 3 binary (YES/NO) checks.
 ## Step 7: Generate DOCX Output
 
 **File naming**: `FirstName_LastName_CoverLetter_CompanyName.docx`
-**Output location**: `~/Downloads/`
+**Output location**: `Output/` (relative to skill root)
 
 **DOCX file contains ONLY the cover letter text** (no metadata).
 
@@ -220,7 +220,7 @@ Run all 3 passes sequentially. Each pass has 3 binary (YES/NO) checks.
     "mission": "...",
     "recent_news": ["..."]
   },
-  "file_generated": "~/Downloads/FirstName_LastName_CoverLetter_Company.docx",
+  "file_generated": "Output/FirstName_LastName_CoverLetter_Company.docx",
   "timestamp": "2026-01-15T00:00:00Z"
 }
 ```
