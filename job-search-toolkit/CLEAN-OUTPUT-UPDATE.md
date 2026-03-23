@@ -136,7 +136,7 @@ Saves ~2 minutes per cover letter!
 
 ## Your CareFirst Cover Letter
 
-**Location:** `~/Career/CONTEXT/Your_Name_CoverLetter_CareFirst.md`
+**Location:** `CONTEXT/Your_Name_CoverLetter_CareFirst.md` (relative to skill root)
 
 **Content:** ✅ Clean cover letter only (398 words, 6 paragraphs)
 

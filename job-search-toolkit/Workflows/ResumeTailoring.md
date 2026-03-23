@@ -77,7 +77,7 @@ The `ResumeGenerator.js` enforces immutable fields at code level. Only provide d
 
 ## Step 0: Load Career Context Files
 
-Load these files from `~/Career/CONTEXT/`:
+Load these files from `CONTEXT/` (relative to skill root):
 1. **Professional Background - Index.md** (always first)
 2. **Experience Details.md** - For verifiable achievements and metrics
 3. **Technical Skills.md** - For skills inventory and resume tailoring notes

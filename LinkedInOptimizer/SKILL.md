@@ -34,7 +34,8 @@ Determine the optimization scope based on user request:
 │  CRITICAL: LOAD CONTEXT FILES BEFORE OPTIMIZING ANY            │
 │  LINKEDIN SECTIONS (HEADLINE, ABOUT, EXPERIENCE, SKILLS)       │
 │                                                                 │
-│  Context folder: Career/CONTEXT/                                │
+│  Context folder: ../job-search-toolkit/CONTEXT/                  │
+│  (Shared with job-search-toolkit — context lives there)         │
 │                                                                 │
 │  1. Professional Background - Index.md (ALWAYS load first)     │
 │     → Quick reference, career timeline, positioning            │
@@ -46,7 +47,7 @@ Determine the optimization scope based on user request:
 │     → What NOT to overclaim in profile                         │
 └─────────────────────────────────────────────────────────────────┘
 
-**Read BEFORE any optimization from `Career/CONTEXT/`:**
+**Read BEFORE any optimization from `../job-search-toolkit/CONTEXT/`:**
 
 | File | Purpose | When Required |
 |------|---------|---------------|

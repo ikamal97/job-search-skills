@@ -43,7 +43,7 @@ ls -t ~/Downloads/*[Rr]esume*.docx 2>/dev/null | head -1
 ## Step 1: Load Context
 
 1. **Parse resume** - Extract all content (summary, skills, experience bullets)
-2. **Load Career Context** from `~/Career/CONTEXT/`:
+2. **Load Career Context** from `CONTEXT/` (relative to skill root):
    - Professional Background - Index.md (always first)
    - Experience Details.md (for cross-checking achievements)
    - Honest Gaps.md (for authenticity constraints)

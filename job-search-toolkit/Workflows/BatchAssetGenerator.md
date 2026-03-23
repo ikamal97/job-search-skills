@@ -230,7 +230,7 @@ This workflow orchestrates:
 
 Both workflows auto-load:
 - User resume from Career folder
-- Career context files from `~/Career/CONTEXT/` (Index, Experience Details, Technical Skills, Honest Gaps)
+- Career context files from `CONTEXT/` (relative to skill root: Index, Experience Details, Technical Skills, Honest Gaps)
 - Job requirements via URL parsing
 
 ---

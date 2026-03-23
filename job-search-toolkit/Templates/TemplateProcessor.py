@@ -42,7 +42,7 @@ class ResumeTemplateProcessor:
         Search order:
         1. Downloads folder (specific file)
         2. Downloads folder (any *Resume*.docx)
-        3. Career folder in Obsidian vault
+        3. CONTEXT/ directory (relative to skill root)
 
         Returns:
             Path to template file or None if not found
@@ -50,7 +50,7 @@ class ResumeTemplateProcessor:
         search_locations = [
             "~/Downloads/Your_Name_Resume.docx",
             os.path.expanduser("~/Downloads/*Resume*.docx"),  # Fallback pattern
-            "~/Career/CONTEXT/*.docx"
+            os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "CONTEXT", "*.docx")
         ]
 
         if verbose:
@@ -545,7 +545,7 @@ def generate_resume_from_template(
                 "Searched locations:\n"
                 "  1. ~/Downloads/Your_Name_Resume.docx\n"
                 "  2. ~/Downloads/*Resume*.docx\n"
-                "  3. ~/Career/CONTEXT/*.docx\n"
+                "  3. CONTEXT/*.docx (relative to skill root)\n"
                 "Please ensure template exists in one of these locations."
             )
 

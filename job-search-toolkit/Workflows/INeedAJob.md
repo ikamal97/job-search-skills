@@ -41,10 +41,9 @@ This workflow conducts an adaptive interview across 8 phases to extract your pro
 
 Before starting the interview:
 
-1. **Ask where to save context files:**
+1. **Save context files to the skill's CONTEXT directory:**
    ```
-   Where should I save your career context files?
-   Default: ~/Career/CONTEXT/
+   Context files will be saved to CONTEXT/ (inside the skill directory).
    ```
 
 2. **Check for existing context files** in that directory:

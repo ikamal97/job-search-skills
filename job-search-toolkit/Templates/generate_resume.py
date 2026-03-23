@@ -133,7 +133,7 @@ def main():
         print("Make sure template file exists at:")
         print("  ~/Downloads/Your_Name_Resume.docx")
         print("  OR")
-        print("  ~/Career/CONTEXT/")
+        print("  CONTEXT/ (relative to skill root)")
         return 1
 
     except Exception as e:

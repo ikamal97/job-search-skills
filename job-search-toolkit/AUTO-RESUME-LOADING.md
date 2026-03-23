@@ -14,11 +14,10 @@ When you request a cover letter, the system:
 
 1. **Searches for your resume** in these locations (priority order):
    ```
-   ✓ **/Career/**/*.pdf        (Primary - finds yours here!)
-   ✓ **/career/**/*.pdf         (Case-insensitive)
+   ✓ CONTEXT/*.pdf              (Primary - skill's context directory)
    ✓ **/*resume*.pdf            (Anywhere with "resume" in name)
-   ✓ **/Career/**/*.docx        (DOCX alternative)
-   ✓ **/Career/**/*.md          (Markdown alternative)
+   ✓ CONTEXT/*.docx             (DOCX alternative)
+   ✓ CONTEXT/*.md               (Markdown alternative)
    ```
 
 2. **Extracts your information automatically:**
@@ -36,7 +35,7 @@ When you request a cover letter, the system:
 
 **Resume Location:** ✅ FOUND
 ```
-~/Career/CONTEXT/Your_Name_BSA_Resume_01.02.26 copy.pdf
+CONTEXT/Your_Name_BSA_Resume_01.02.26 copy.pdf
 ```
 
 **Extracted Data:**
@@ -146,11 +145,10 @@ All skills from your resume's Skills section:
 
 ### If Resume Not Found
 ```
-⚠ Warning: Resume not found in Career folder
+⚠ Warning: Resume not found in CONTEXT folder
 
 Searched locations:
-- ~/Career/
-- career/ (case-insensitive)
+- CONTEXT/ (relative to skill root)
 - Files with "resume" in name
 
 Options:
@@ -158,7 +156,7 @@ Options:
 2. Specify resume file path
 3. Continue with minimal profile (name + contact only)
 
-Recommendation: Save resume to Career folder for automatic detection.
+Recommendation: Save resume to CONTEXT/ folder for automatic detection.
 ```
 
 The system will ask for manual input rather than failing completely.
@@ -170,7 +168,7 @@ The system will ask for manual input rather than failing completely.
 ### Best Practices
 
 **Keep Resume Updated:**
-- Update `Career/` folder whenever you update your resume
+- Update `CONTEXT/` folder whenever you update your resume
 - System always uses the **most recently modified** file
 - Name it clearly (e.g., `Your_Name_BSA_Resume_[date].pdf`)
 
@@ -180,8 +178,8 @@ The system will ask for manual input rather than failing completely.
 - ✅ Markdown (works but less common for applications)
 
 **Location:**
-- ✅ Keep in `~/Career/`
-- ✅ Or anywhere with "Career" or "resume" in path
+- ✅ Keep in `CONTEXT/` (relative to skill root)
+- ✅ Or anywhere with "resume" in the filename
 
 **Multiple Versions:**
 - System picks **most recent** modification date
@@ -266,11 +264,10 @@ Step 4-7: Generate, Optimize, Validate, Output
 ```python
 def find_user_resume():
     search_patterns = [
-        "**/Career/**/*.pdf",      # Primary
-        "**/career/**/*.pdf",       # Case-insensitive
+        "CONTEXT/*.pdf",           # Primary (skill root)
         "**/*resume*.pdf",          # Filename match
-        "**/Career/**/*.docx",      # DOCX format
-        "**/Career/**/*.md"         # Markdown format
+        "CONTEXT/*.docx",          # DOCX format
+        "CONTEXT/*.md"             # Markdown format
     ]
 
     for pattern in search_patterns:
@@ -301,8 +298,7 @@ def find_user_resume():
 
 ### "Resume not found"
 **Solution:** Ensure resume is in one of these locations:
-- `~/Career/`
-- Any folder named "Career" (case-insensitive)
+- `CONTEXT/` (relative to skill root)
 - Any file with "resume" in filename
 
 ### "Could not extract contact info"
@@ -320,7 +316,7 @@ Phone | Email | LinkedIn | Location
 ### Multiple resumes detected
 **Solution:** System uses **most recent** file by modification date
 - Update the resume you want to use
-- Or remove old versions from Career folder
+- Or remove old versions from CONTEXT folder
 
 ---
 

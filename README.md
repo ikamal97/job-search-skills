@@ -67,7 +67,7 @@ Run `/ineedajob` and the interview workflow will create all 6 context files for 
 | `Interview Prep.md` | STAR stories, soundbites, behavioral examples |
 | `Honest Gaps.md` | Limitations and what NOT to overclaim |
 
-Or create them manually — update the context folder path in `job-search-toolkit/SKILL.md` and `LinkedInOptimizer/SKILL.md` to match your setup.
+Or create them manually — place context files in `job-search-toolkit/CONTEXT/` (the skill's self-contained context directory). No external path configuration needed.
 
 ### 3. Configure your resume template
 

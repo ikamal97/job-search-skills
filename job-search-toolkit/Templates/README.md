@@ -127,7 +127,7 @@ output_file = generate_resume_from_template(
 The system auto-searches for template files in:
 
 1. `~/Downloads/Your_Name_Resume.docx`
-2. `~/Career/CONTEXT/*.docx`
+2. `CONTEXT/*.docx` (relative to skill root)
 
 **Template refers to:** The universal structure and formatting specification. Content is dynamic based on job description.
 
@@ -241,7 +241,7 @@ sys.path.insert(0, "~/.claude/skills/docx")
 
 **Solution:** Verify template exists at:
 - `~/Downloads/Your_Name_Resume.docx`, OR
-- `~/Career/CONTEXT/` (any .docx file)
+- `CONTEXT/` (any .docx file, relative to skill root)
 
 ### Error: "Multiple nodes found"
 

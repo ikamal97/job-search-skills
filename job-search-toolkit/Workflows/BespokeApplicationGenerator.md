@@ -102,7 +102,7 @@ For each verified job, invoke JobDescriptionParser to extract:
 
 **Step 2.2: Calculate Fit Scores**
 
-**MANDATORY:** Read user profile from `~/Career/CONTEXT/`:
+**MANDATORY:** Read user profile from `CONTEXT/` (relative to skill root):
 - Professional Background - Index.md (always first)
 - Experience Details.md (for experience verification)
 - Technical Skills.md (for skills matching)
@@ -378,7 +378,7 @@ User: "Search LinkedIn and Built In for Implementation Manager roles and prepare
 - `CoverLetterGenerator.md` - Cover letter generation
 
 **Required Files:**
-- `~/Career/CONTEXT/` folder - Career context files (Index, Experience Details, Technical Skills, Honest Gaps)
+- `CONTEXT/` folder (relative to skill root) - Career context files (Index, Experience Details, Technical Skills, Honest Gaps)
 - Template DOCX in Downloads or Career folder
 
 ---

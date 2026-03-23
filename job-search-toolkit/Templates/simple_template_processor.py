@@ -346,7 +346,7 @@ def find_template(verbose: bool = True) -> Optional[str]:
     search_locations = [
         "~/Downloads/Your_Name_Resume.docx",
         os.path.expanduser("~/Downloads/*Resume*.docx"),  # Fallback pattern
-        "~/Career/CONTEXT/*.docx"
+        os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "CONTEXT", "*.docx")
     ]
 
     if verbose:
@@ -438,7 +438,7 @@ def generate_resume_from_template(
             "Searched locations:\n"
             "  1. ~/Downloads/Your_Name_Resume.docx\n"
             "  2. ~/Downloads/*Resume*.docx\n"
-            "  3. ~/Career/CONTEXT/*.docx\n"
+            "  3. CONTEXT/*.docx (relative to skill root)\n"
             "Please ensure template exists in one of these locations."
         )
 

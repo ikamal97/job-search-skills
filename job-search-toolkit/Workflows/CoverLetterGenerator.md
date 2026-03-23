@@ -30,7 +30,7 @@
 
 ## Step 0: Auto-Load Career Context (MANDATORY)
 
-**Read BEFORE any generation from `~/Career/CONTEXT/`:**
+**Read BEFORE any generation from `CONTEXT/` (relative to skill root):**
 1. **Professional Background - Index.md** (always first)
 2. **Experience Details.md** - For achievements with metrics
 3. **Specialization Profile.md** - For domain expertise and key project stories

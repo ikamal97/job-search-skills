@@ -99,7 +99,8 @@ This toolkit is designed to work alongside the `job-search-specialist` agent:
 │  CRITICAL: LOAD CONTEXT FILES BEFORE CREATING ANY              │
 │  RESUMES, COVER LETTERS, OR APPLICATION MATERIALS              │
 │                                                                 │
-│  Context folder: ~/Career/CONTEXT/  (CUSTOMIZE this path)       │
+│  Context folder: CONTEXT/  (inside this skill directory)         │
+│  (/ineedajob generates these files automatically)               │
 │                                                                 │
 │  Files:                                                         │
 │  1. Professional Background - Index.md (ALWAYS load first)     │
@@ -312,7 +313,7 @@ User: "Tailor my resume for this Absorb Software Sales Operations Analyst role"
 The system auto-searches for template files in these locations:
 
 1. `~/Downloads/Your_Name_Resume.docx`
-2. `~/Career/CONTEXT/` (any .docx file)
+2. `CONTEXT/` (any .docx file, relative to skill root)
 
 **Note:** "Template" refers to the universal structure and formatting specification. Content is dynamic based on job description.
 
